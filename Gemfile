@@ -27,7 +27,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-# view
+# Views
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'haml-rails', '~> 1.0'
@@ -45,6 +45,7 @@ group :development do
   gem 'rubocop', '~> 0.51.0', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'overcommit', '~> 0.41.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
