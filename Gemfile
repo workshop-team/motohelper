@@ -34,7 +34,9 @@ gem 'haml-rails', '~> 1.0'
 
 group :development, :test do
   gem 'awesome_print'
+  gem 'factory_bot_rails'
   gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :development do
@@ -44,6 +46,10 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
