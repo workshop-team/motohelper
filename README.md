@@ -22,7 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-This app will blow your mind... 
+This app will blow your mind...
 
- @kamilsdz 
+ @kamilsdz
  @nikos
+ @fab-ian
