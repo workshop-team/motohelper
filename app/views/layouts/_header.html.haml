@@ -1,23 +1,12 @@
-%nav.navbar.navbar-expand-md.navbar-light.bg-faded
-  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
-    %span.navbar-toggler-icon
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.rounded
   %a.navbar-brand{:href => "#"} MOTOHELPER
-  #navbarNav.collapse.navbar-collapse
-    %ul.navbar-nav
-      %li.nav-item.active
-        %a.nav-link{:href => "#"}
-          Home
-          %span.sr-only (current)
-      %li.nav-item
-        %a.nav-link{:href => "#"} Features
-      %li.nav-item
-        %a.nav-link{:href => "#"} Pricing
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "/users/sign_in"}
-            %span.glyphicon.glyphicon-log-in
-            Login
-        %li
-          %a{:href => "/users/sign_up"}
-            %span.glyphicon.glyphicon-user
-            Sign Up
+  %ul.navbar-nav.mr-auto
+    %li.nav-item.active
+      %a.nav-link Left Link 1
+    %li.nav-item
+      %a.nav-link Left Link 2
+  %ul.navbar-nav.ml-auto
+    %li.nav-item
+      %a.nav-link Right Link 1
+    %li.navbar-item
+      %a.nav-link Right Link 2
