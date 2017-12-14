@@ -1,29 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Download and setup the app 
 
-Things you may want to cover:
+if you use SSH  
+``` git clone git@github.com:workshop-team/motohelper.git ```  
+if you use HTTPS  
+``` git clone https://github.com/workshop-team/motohelper.git ```  
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-This app will blow your mind...
-
- @kamilsdz
- @nikos
- @fab-ian
+```
+cd motohelper/
+gem install bundler
+bundle
+rake db:setup
+rails s
+```
