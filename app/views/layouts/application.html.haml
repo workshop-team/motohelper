@@ -8,7 +8,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/header'
-    .container
+    %main.container{:role => "main"}
       - flash.each do |name, msg|
         = content_tag(:div, msg, class: "alert alert-info")
       = yield
+    = render 'layouts/footer'

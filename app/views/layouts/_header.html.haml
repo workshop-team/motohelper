@@ -1,12 +1,17 @@
-%nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.rounded
+%nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
   %a.navbar-brand{:href => "#"} MOTOHELPER
-  %ul.navbar-nav.mr-auto
-    %li.nav-item.active
-      %a.nav-link Left Link 1
-    %li.nav-item
-      %a.nav-link Left Link 2
-  %ul.navbar-nav.ml-auto
-    %li.nav-item
-      %a.nav-link Right Link 1
-    %li.navbar-item
-      %a.nav-link Right Link 2
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{:href => "#"} Home
+      %li.nav-item
+        %a.nav-link{:href => "#"} About
+      %li.nav-item
+        %a.nav-link{:href => "#"} FAQs
+    %ul.navbar-nav.my-2.my-lg-0
+      %li.nav-item
+        %a.nav-link{:href => "#"} Login
+      %li.nav-item
+        %a.nav-link{:href => "#"} Register
