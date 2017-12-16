@@ -1,6 +1,6 @@
 # README
 
-### Download and setup the app 
+### Download and setup the app
 
 if you use SSH  
 ``` git clone git@github.com:workshop-team/motohelper.git ```  
@@ -14,3 +14,8 @@ bundle
 rake db:setup
 rails s
 ```
+Important:
+Config mailer on production:
+''' config/environments/production.rb '''
+''' config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } '''
+:host should be set to the actual host of application.
