@@ -12,10 +12,11 @@ cd motohelper/
 gem install bundler
 bundle
 rake db:setup
+rake db:migrate
 rails s
 ```
 Important:
 Config mailer on production:
 ''' config/environments/production.rb '''
-''' config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } '''
+''' config.action_mailer.default_url_options = { host: 'example.com' } '''
 :host should be set to the actual host of application.
