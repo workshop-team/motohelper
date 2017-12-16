@@ -17,9 +17,4 @@
 /yarn-error.log
 /.idea
 .byebug_history
-/db/*.sqlite3
-config/database.yml
-config/google_analytics.yml
-.DS_Store
-/nbproject/
 public/assets/**
