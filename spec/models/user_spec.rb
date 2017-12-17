@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Car, type: :model do
-  it { validate_presence_of(:name) }
-  it { have_many(:cars) }
+RSpec.describe User, type: :model do
+  it { should validate_presence_of(:name) }
+  it { should have_many(:cars) }
 end
