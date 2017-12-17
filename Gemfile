@@ -33,6 +33,9 @@ gem 'font-awesome-sass', '~> 4.7.0'
 gem 'haml-rails', '~> 1.0'
 gem 'jquery-rails'
 
+# Engine
+gem 'devise'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'
