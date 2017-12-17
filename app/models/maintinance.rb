@@ -1,4 +1,4 @@
 class Maintinance < ApplicationRecord
   belongs_to :car
-  has_many :maintenances
+  validates :name, presence: true
 end
