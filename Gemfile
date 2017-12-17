@@ -34,8 +34,8 @@ gem 'haml-rails', '~> 1.0'
 gem 'jquery-rails'
 
 # Engine
-gem 'devise'
 gem 'administrate'
+gem 'devise'
 
 group :development, :test do
   gem 'awesome_print'
