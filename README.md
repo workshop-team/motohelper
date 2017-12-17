@@ -12,8 +12,6 @@ cd motohelper/
 gem install bundler
 bundle
 rake db:setup
-rake db:migrate
-rake db:seed
 rails s
 ```
 * Important: *

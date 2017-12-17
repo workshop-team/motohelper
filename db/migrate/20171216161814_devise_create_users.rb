@@ -20,7 +20,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.inet     :last_sign_in_ip
 
       ## Additional
-      t.string  :name
+      t.string  :name, null: false
       t.string  :type
 
       ## Confirmable
