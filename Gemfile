@@ -35,6 +35,7 @@ gem 'jquery-rails'
 
 # Engine
 gem 'devise'
+gem 'administrate'
 
 group :development, :test do
   gem 'awesome_print'
