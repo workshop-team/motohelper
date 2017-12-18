@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Maintinance < ApplicationRecord
+class Maintenance < ApplicationRecord
   belongs_to :car
   validates :name, presence: true
 end
