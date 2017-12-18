@@ -33,6 +33,10 @@ gem 'font-awesome-sass', '~> 4.7.0'
 gem 'haml-rails', '~> 1.0'
 gem 'jquery-rails'
 
+# Default locales
+gem 'devise-i18n'
+gem 'rails-i18n', '~> 5.0.0'
+
 # Engine
 gem 'devise'
 
