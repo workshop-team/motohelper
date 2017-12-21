@@ -12,7 +12,7 @@ class User < ApplicationRecord
   before_save :set_regular_user
 
   def set_regular_user
-    self.type = "RegularUser"
+    self.type = 'RegularUser'
   end
 
   def admin?
