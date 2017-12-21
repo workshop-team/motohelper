@@ -55,7 +55,7 @@ class ReminderDashboard < Administrate::BaseDashboard
     name
     reminder_date
     mileage
-    note
+    notes
   ].freeze
 
   # Overwrite this method to customize how reminders are displayed
@@ -64,4 +64,8 @@ class ReminderDashboard < Administrate::BaseDashboard
   # def display_resource(reminder)
   #   "Reminder ##{reminder.id}"
   # end
+
+  def display_resource(reminder)
+    reminder.name
+  end
 end

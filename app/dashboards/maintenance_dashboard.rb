@@ -63,4 +63,8 @@ class MaintenanceDashboard < Administrate::BaseDashboard
   # def display_resource(maintenance)
   #   "Maintenance ##{maintenance.id}"
   # end
+
+  def display_resourece(maintenance)
+    maintenance.name
+  end
 end
