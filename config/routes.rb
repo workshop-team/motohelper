@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :admin_users
     resources :cars
     resources :reminders
+    resources :maintenances
 
     root 'regular_users#index'
   end
