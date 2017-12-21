@@ -9,6 +9,11 @@ class User < ApplicationRecord
   has_many :cars
 
   validates :name, presence: true
+  before_save :set_regular_user
+
+  def set_regular_user
+    self.type = "RegularUser"
+  end
 
   def admin?
     type == 'AdminUser'
