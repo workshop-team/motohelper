@@ -10,6 +10,7 @@ class UserDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    cars: Field::HasMany,
     id: Field::Number,
     email: Field::String,
     password: Field::String.with_options(searchable: false),
@@ -45,6 +46,7 @@ class UserDashboard < Administrate::BaseDashboard
     id
     name
     email
+    cars
     encrypted_password
     reset_password_token
     reset_password_sent_at
@@ -66,6 +68,7 @@ class UserDashboard < Administrate::BaseDashboard
     name
     email
     password
+    cars
   ].freeze
 
   # Overwrite this method to customize how admin users are displayed
