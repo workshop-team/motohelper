@@ -55,7 +55,7 @@ class ReminderDashboard < Administrate::BaseDashboard
     name
     reminder_date
     mileage
-    notes
+    note
   ].freeze
 
   # Overwrite this method to customize how reminders are displayed

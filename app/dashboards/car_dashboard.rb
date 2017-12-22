@@ -67,6 +67,6 @@ class CarDashboard < Administrate::BaseDashboard
   # end
 
   def display_resource(car)
-    car.name
+    car.registration_number
   end
 end
