@@ -43,6 +43,7 @@ gem 'devise'
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.6'
 end
