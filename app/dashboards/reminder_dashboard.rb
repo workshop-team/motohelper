@@ -58,13 +58,6 @@ class ReminderDashboard < Administrate::BaseDashboard
     note
   ].freeze
 
-  # Overwrite this method to customize how reminders are displayed
-  # across all pages of the admin dashboard.
-  #
-  # def display_resource(reminder)
-  #   "Reminder ##{reminder.id}"
-  # end
-
   def display_resource(reminder)
     reminder.name
   end

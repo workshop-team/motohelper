@@ -60,13 +60,7 @@ class CarDashboard < Administrate::BaseDashboard
     model
   ].freeze
 
-  # Overwrite this method to customize how cars are displayed
-  # across all pages of the admin dashboard.
-  # def display_resource(car)
-  #   "Car ##{car.id}"
-  # end
-
   def display_resource(car)
-    car.brand + ' ' + car.model + ' ' + car.registration_number
+    "#{car.brand} #{car.model}: #{car.registration_number}"
   end
 end

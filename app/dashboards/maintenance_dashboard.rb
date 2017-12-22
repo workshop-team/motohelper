@@ -56,14 +56,6 @@ class MaintenanceDashboard < Administrate::BaseDashboard
     warranty_date
     note
   ].freeze
-
-  # Overwrite this method to customize how maintenances are displayed
-  # across all pages of the admin dashboard.
-  #
-  # def display_resource(maintenance)
-  #   "Maintenance ##{maintenance.id}"
-  # end
-
   def display_resourece(maintenance)
     maintenance.name
   end
