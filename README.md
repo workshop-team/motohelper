@@ -12,6 +12,8 @@ cd motohelper/
 gem install bundler
 bundle
 rake db:setup
+rake motohelper:load_sample_data
+
 rails s
 ```
 * Important: *
