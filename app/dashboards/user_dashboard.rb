@@ -4,12 +4,12 @@ require 'administrate/base_dashboard'
 
 class UserDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
-  # a hash that describes the type of each of the model's fields.
-  #
+  # a hash that describes the type of each of the model's fields.s
   # Each different type represents an Administrate::Field object,
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    cars: Field::HasMany,
     id: Field::Number,
     email: Field::String,
     password: Field::String.with_options(searchable: false),
@@ -35,7 +35,6 @@ class UserDashboard < Administrate::BaseDashboard
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
-  #
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
@@ -51,6 +50,7 @@ class UserDashboard < Administrate::BaseDashboard
     id
     name
     email
+    cars
     encrypted_password
     reset_password_token
     reset_password_sent_at
@@ -74,12 +74,10 @@ class UserDashboard < Administrate::BaseDashboard
     email
     type
     avatar
+    cars
   ].freeze
 
-  # Overwrite this method to customize how admin users are displayed
-  # across all pages of the admin dashboard.
-  #
-  # def display_resource(admin_user)
-  #   "AdminUser ##{admin_user.id}"
-  # end
+  def display_resource(user)
+    user.name
+  end
 end
