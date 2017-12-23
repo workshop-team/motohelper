@@ -10,8 +10,11 @@ if you use HTTPS
 ```
 cd motohelper/
 gem install bundler
+brew install imagemagick (on OSX) or sudo apt-get install ruby-mini-magick (on Ubuntu)
 bundle
 rake db:setup
+rake motohelper:load_sample_data
+
 rails s
 ```
 * Important: *
