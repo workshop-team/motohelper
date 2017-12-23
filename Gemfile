@@ -32,13 +32,14 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'haml-rails', '~> 1.0'
 gem 'jquery-rails'
-gem "mini_magick"
+gem 'mini_magick'
 
 # Default locales
 gem 'rails-i18n', '~> 5.0.0'
 
 # Engine
 gem 'administrate'
+gem 'administrate-field-carrierwave', '~> 0.2.0'
 gem 'carrierwave', '~> 1.0'
 gem 'devise'
 
