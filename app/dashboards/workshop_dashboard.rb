@@ -11,7 +11,11 @@ class WorkshopDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    kind: Field::String.with_options(searchable: true),
+    kind: Field::SelectBasic.with_options(choices:
+      %w[
+        audi citroen fiat honda hyundai mazda opel peugeot
+        renault toyota volkswagen warsztat_lakierniczy warsztat_samochodowy
+      ]),
     latitude: Field::String.with_options(searchable: false),
     longitude: Field::String.with_options(searchable: false),
     created_at: Field::DateTime,
