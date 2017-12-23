@@ -25,7 +25,12 @@ class UserDashboard < Administrate::BaseDashboard
     name: Field::String,
     type: Field::String,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime
+    updated_at: Field::DateTime,
+    avatar: Field::Carrierwave.with_options(
+      image: :thumb,
+      multiple: false,
+      image_on_index: true
+    )
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -36,6 +41,7 @@ class UserDashboard < Administrate::BaseDashboard
     id
     name
     email
+    avatar
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -57,6 +63,7 @@ class UserDashboard < Administrate::BaseDashboard
     type
     created_at
     updated_at
+    avatar
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -65,7 +72,8 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     name
     email
-    password
+    type
+    avatar
     cars
   ].freeze
 
