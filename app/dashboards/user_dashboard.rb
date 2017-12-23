@@ -72,6 +72,7 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     name
     email
+    type
     avatar
   ].freeze
 
