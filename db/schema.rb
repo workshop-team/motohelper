@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20171221202029) do
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
     t.string "name", null: false
-    t.string "type"
+    t.string "type", default: "RegularUser"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar"
