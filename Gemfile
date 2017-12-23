@@ -41,6 +41,7 @@ gem 'rails-i18n', '~> 5.0.0'
 gem 'administrate'
 gem 'administrate-field-carrierwave', '~> 0.2.0'
 gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-i18n'
 gem 'devise'
 
 group :development, :test do
