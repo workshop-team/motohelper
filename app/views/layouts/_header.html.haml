@@ -12,11 +12,13 @@
         %a.nav-link{:href => "#"} FAQs
     %ul.navbar-nav.my-2.my-lg-0
       - if user_signed_in?
-        =image_tag current_user.avatar.url unless current_user.avatar.blank?
-        %li.nav-item
-          = link_to('Edit registration', edit_user_registration_path, class: 'nav-link')
-        %li.nav-item
-          = link_to('Logout', destroy_user_session_path, method: :delete, class: 'nav-link')
+        .dropdown.show
+          %a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            =image_tag current_user.avatar.url, :class => "header-avatar" unless current_user.avatar.blank?
+            =current_user.name
+          .dropdown-menu.dropdown-menu-left{"aria-labelledby" => "dropdownMenuLink"}
+            = link_to('Edit profile', edit_user_registration_path, class: 'dropdown-item')
+            = link_to('Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item')
       - else
         %li.nav-item
           = link_to('Login', new_user_session_path, class: 'nav-link')

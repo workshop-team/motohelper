@@ -1,7 +1,23 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :multipart => true }) do |f|
   = devise_error_messages!
+  .card.text-center
+    .card-header
+      %h2 Edit #{resource_name.to_s.humanize}
+    - if current_user.avatar.present?
+      .card-body
+        %p.card-text Your avatar:
+        = image_tag current_user.avatar.url, :class => "edit_user-avatar"
+        .form-group
+          = f.label :remove_avatar do
+            = f.check_box :remove_avatar
+            Delete avatar?
+
+  Load new avatar:
+  %br/
+  = f.file_field :avatar
+  = f.hidden_field :avatar_cache
+  %br/
+  %br/
   .field
     = f.label :email
     %br/
@@ -10,12 +26,7 @@
     = f.label :name
     %br/
     = f.text_field :name
-  - if current_user.avatar.url.present?
-    = image_tag(current_user.avatar.url)
-    = f.label :remove_avatar do
-      = f.check_box :remove_avatar
-  = f.file_field :avatar
-  = f.hidden_field :avatar_cache
+    %br/
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     %div
       Currently waiting confirmation for: #{resource.unconfirmed_email}
@@ -33,13 +44,15 @@
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation, autocomplete: "off"
+  %br/
   .field
     = f.label :current_password
-    %i (we need your current password to confirm your changes)
+    %b (we need your current password to confirm your changes)
     %br/
     = f.password_field :current_password, autocomplete: "off"
   .actions
     = f.submit "Update"
+%br/
 %h3 Cancel my account
 %p
   Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
