@@ -38,8 +38,8 @@ gem 'rails-i18n', '~> 5.0.0'
 
 # Engine
 gem 'administrate'
-gem 'devise'
 gem 'carrierwave', '~> 1.0'
+gem 'devise'
 
 group :development, :test do
   gem 'awesome_print'

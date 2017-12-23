@@ -12,6 +12,7 @@
         %a.nav-link{:href => "#"} FAQs
     %ul.navbar-nav.my-2.my-lg-0
       - if user_signed_in?
+        =image_tag current_user.avatar.url unless current_user.avatar.blank?
         %li.nav-item
           = link_to('Edit registration', edit_user_registration_path, class: 'nav-link')
         %li.nav-item
