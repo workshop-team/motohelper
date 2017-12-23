@@ -10,6 +10,7 @@ if you use HTTPS
 ```
 cd motohelper/
 gem install bundler
+brew install imagemagick (on OSX)
 bundle
 rake db:setup
 rails s
