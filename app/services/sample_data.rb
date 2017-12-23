@@ -6,7 +6,8 @@ class SampleData
 
     10.times do
       @user = RegularUser.create!(
-        name: Faker::Name.name, email: Faker::Internet.email, password: Faker::Internet.password
+        name: Faker::Name.name, email: Faker::Internet.email,
+        password: Faker::Internet.password, remote_avatar_url: Faker::Avatar.image
       )
       puts ".#{@user.name}"
       add_cars
