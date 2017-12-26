@@ -19,5 +19,11 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
+
+    def resource_params
+      super.tap do |params|
+        params.delete(:password) if params[:password].empty?
+      end
+    end
   end
 end
