@@ -24,22 +24,19 @@ class ReminderDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    id
-    car
     name
     reminder_date
     mileage
-    note
+    car
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    id
-    car
     name
     reminder_date
     mileage
+    car
     note
     created_at
     updated_at
@@ -49,7 +46,6 @@ class ReminderDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    car
     name
     reminder_date
     mileage
