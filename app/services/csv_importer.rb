@@ -2,12 +2,16 @@
 require 'csv'
 
 class CsvImporter
-#  LATITUDE = row[1]
-#  LONGITUDE = row[0]
 
-  def import_from_csv(path_to_csv)
+  def self.import_from_csv(path_to_csv, kind)
     CSV.foreach(path_to_csv) do |row|
-      puts "Longitude #{row[0]}; Latitude #{row[1]} "
+      create(row, kind)
     end
+  end
+
+  private
+  def self.create(row, kind)
+    puts "Creating: kind: #{kind}, longitude: #{row[0]}, latitude: #{row[1]}"
+    Workshop.create(kind: kind, longitude: row[0], latitude: row[1])
   end
 end

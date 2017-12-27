@@ -6,9 +6,9 @@ namespace :motohelper do
     SampleData.new.perform
   end
 
-  desc 'Import workshop from POI (CSV). Args: Path to file and kind of workshop.'
+  desc 'Import workshops from POI (CSV). Run: motohelper:import_poi[\'poi/Serwis Audi.csv, audi\']'
   task :import_poi, [:path, :kind] => :environment do |t, args|
-    CsvImporter.import_from_csv(args[:path, :kind])
+    CsvImporter.import_from_csv(args[:path], args[:kind])
   end
 
 end
