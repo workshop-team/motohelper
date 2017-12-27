@@ -43,6 +43,7 @@ gem 'administrate-field-carrierwave', '~> 0.2.0'
 gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-i18n'
 gem 'devise'
+gem 'paranoia', '~> 2.2'
 
 group :development, :test do
   gem 'awesome_print'
