@@ -11,11 +11,7 @@ class WorkshopDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    kind: Field::SelectBasic.with_options(choices:
-      %w[
-        audi citroen fiat honda hyundai mazda opel peugeot
-        renault toyota volkswagen warsztat_lakierniczy warsztat_samochodowy
-      ]),
+    kind: Field::SelectBasic.with_options(choices: Workshop.kinds.keys),
     latitude: Field::String.with_options(searchable: false),
     longitude: Field::String.with_options(searchable: false),
     created_at: Field::DateTime,
@@ -56,7 +52,7 @@ class WorkshopDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how workshops are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(workshop)
-  #   "Workshop ##{workshop.id}"
-  # end
+  def display_resource(workshop)
+    "#{workshop.kind.upcase} - ID: #{workshop.id}"
+  end
 end
