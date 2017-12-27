@@ -7,8 +7,7 @@ namespace :motohelper do
   end
 
   desc 'Import workshops from POI (CSV). Run: motohelper:import_poi[\'poi/Serwis Audi.csv, audi\']'
-  task :import_poi, [:path, :kind] => :environment do |t, args|
+  task :import_poi, %i[path kind] => :environment do |_t, args|
     CsvImporter.import_from_csv(args[:path], args[:kind])
   end
-
 end
