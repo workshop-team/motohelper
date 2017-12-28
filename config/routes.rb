@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'dashboard/index'
+  resources :dashboard, only: :index
 
   devise_for :users
 
