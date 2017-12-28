@@ -1,0 +1,32 @@
+.dash-unit {
+  margin-bottom: 30px;
+  padding:10px;
+  border: 1px solid #383737;
+  background-image: url(../img/sep-half.png);
+  background-color: #3d3d3d;
+  color: #fff;
+  height: 290px
+}
+
+.dash-unit:hover {
+  background-color: #4f4f4f;
+  -moz-box-shadow: 3px 3px 2px 0 #151515;
+  -webkit-box-shadow: 3px 3px 2px 0 #151515;
+  box-shadow: 3px 3px 2px 0 #151515
+}
+
+.dash-unit dtitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 8px;
+  padding: 0;
+  height: inherit
+}
+
+.dash-unit hr {
+  border: 0;
+  border-top: 1px solid #151515;
+  border-top-style: dashed;
+  margin-top: 3px
+}
