@@ -13,6 +13,7 @@ class UserDashboard < Administrate::BaseDashboard
     id: Field::Number,
     email: Field::String,
     password: Field::String.with_options(searchable: false),
+    language: Field::SelectBasic.with_options(choices: User.languages.keys),
     encrypted_password: Field::String,
     reset_password_token: Field::String,
     reset_password_sent_at: Field::DateTime,
@@ -41,6 +42,7 @@ class UserDashboard < Administrate::BaseDashboard
     avatar
     name
     email
+    language
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -49,6 +51,7 @@ class UserDashboard < Administrate::BaseDashboard
     avatar
     name
     email
+    language
     cars
     encrypted_password
     reset_password_token
@@ -71,6 +74,7 @@ class UserDashboard < Administrate::BaseDashboard
     name
     email
     password
+    language
     cars
   ].freeze
 

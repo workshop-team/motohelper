@@ -10,6 +10,8 @@ class User < ApplicationRecord
 
   has_many :cars
 
+  enum language: { pl: 0, en: 1 }
+
   validates :name, presence: true
 
   def admin?
