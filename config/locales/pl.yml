@@ -1,2 +1,57 @@
 pl:
   auth_admin_alert: 'Strona dostępna tylko dla administratorów'
+
+  activerecord:
+    models:
+      regular_user:
+        one: 'Użytkownik'
+        other: 'Użytkownicy'
+
+      admin_user:
+        one: 'Administrator'
+        other: 'Administratorzy'
+
+      car:
+        one: 'Samochód'
+        other: 'Samochody'
+
+      reminder:
+        one: 'Powiadomienie'
+        other: 'Powiadomienia'
+
+      maintenance:
+        one: 'Usługa serwisowa'
+        other: 'Usługi serwisowe'
+
+      workshop:
+        one: 'Warsztat'
+        other: 'Warsztaty'
+
+    attributes:
+      user:
+        avatar: 'Awatar'
+        name: 'Nazwa'
+        email: 'E-mail'
+        password: 'Hasło'
+
+      car:
+        brand: 'Marka'
+        model: 'Model'
+        registration_number: 'Numer rejestracyjny'
+
+      reminder:
+        name: 'Nazwa'
+        reminder_date: 'Data powiadomienia'
+        mileage: 'Przebieg'
+        note: 'Notatka'
+
+      maintenance:
+        name: 'Nazwa'
+        mileage: 'Przebieg'
+        warranty_date: 'Data gwarancji'
+        note: 'Notatka'
+
+      workshop:
+        kind: 'Rodzaj'
+        latitude: 'szerokość geograficzna'
+        longitude: 'długość geograficzna'
