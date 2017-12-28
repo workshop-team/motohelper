@@ -40,6 +40,7 @@ gem 'rails-i18n', '~> 5.0.0'
 # Engine
 gem 'administrate'
 gem 'administrate-field-carrierwave', '~> 0.2.0'
+gem 'administrate-field-select', '~> 2.0', require: 'administrate/field/select_basic'
 gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-i18n'
 gem 'devise'
