@@ -9,6 +9,8 @@
       %li.nav-item
         = link_to 'Admin', admin_root_path, class: 'nav-link'
       %li.nav-item
+        = link_to 'Dashboard', dashboard_index_path, class: 'nav-link'
+      %li.nav-item
         %a.nav-link{:href => "#"} FAQs
     %ul.navbar-nav.my-2.my-lg-0
       - if user_signed_in?
