@@ -1,2 +1,4 @@
-- @maintenances.each do |maintenance|
-  %p= link_to maintenance.name, maintenance
+.autopagerize_page_element
+  - @maintenances.each do |maintenance|
+    %p= link_to maintenance.name, maintenance
+= paginate @maintenances, theme: 'twitter-bootstrap-4'

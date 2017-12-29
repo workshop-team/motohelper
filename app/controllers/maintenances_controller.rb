@@ -2,7 +2,7 @@
 
 class MaintenancesController < ApplicationController
   def index
-    @maintenances = current_user.maintenances
+    @maintenances = current_user.maintenances.page params[:page]
   end
 
   def show
