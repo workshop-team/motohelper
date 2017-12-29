@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :maintenances, only: %i[show index]
+  concern :paginatable do
+    get '(page/:page)', action: :index, on: :collection, as: ''
+  end
+
+  resources :maintenances, only: %i[show index], concerns: :paginatable
 
   resources :dashboard, only: :index
 
