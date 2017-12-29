@@ -9,6 +9,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :cars
+  has_many :maintenances, through: :cars
 
   validates :name, presence: true
 

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :maintenances, only: %i[show index]
+
   resources :dashboard, only: :index
 
   devise_for :users
