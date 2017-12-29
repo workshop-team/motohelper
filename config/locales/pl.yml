@@ -33,6 +33,7 @@ pl:
         name: 'Nazwa'
         email: 'E-mail'
         password: 'Hasło'
+        language: 'Język'
 
       car:
         brand: 'Marka'
