@@ -29,9 +29,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Views
 gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'bootstrap4-kaminari-views'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'haml-rails', '~> 1.0'
 gem 'jquery-rails'
+gem 'kaminari'
 gem 'mini_magick'
 
 # Default locales
