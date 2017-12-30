@@ -9,10 +9,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :maintenances, through: :cars
   has_many :cars, dependent: :destroy
+  has_many :maintenances, through: :cars
   enum language: { pl: 0, en: 1 }
-
 
   validates :name, presence: true
 
