@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :maintenances, only: %i[show index], concerns: :paginatable
+  resources :reminders, only: %i[show index], concerns: :paginatable
   resources :dashboard, only: :index
 
   devise_for :users
