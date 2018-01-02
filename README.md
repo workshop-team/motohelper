@@ -2,13 +2,15 @@
 
 ### Download and setup the app
 
+We are using RVM (https://rvm.io/)
+
 if you use SSH  
 ``` git clone git@github.com:workshop-team/motohelper.git ```  
 if you use HTTPS  
 ``` git clone https://github.com/workshop-team/motohelper.git ```  
 
 ```
-cd motohelper/
+cd motohelper
 gem install bundler
 brew install imagemagick (on OSX) or sudo apt-get install ruby-mini-magick (on Ubuntu)
 bundle
