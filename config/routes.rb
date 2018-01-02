@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'home' => 'pages#home'
+  get 'dashboard' => 'pages#dashboard'
+
   concern :paginatable do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
@@ -22,5 +25,5 @@ Rails.application.routes.draw do
     root 'regular_users#index'
   end
 
-  root 'home#index'
+  root 'pages#home'
 end
