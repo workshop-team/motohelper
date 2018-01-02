@@ -1,0 +1,4 @@
+.autopagerize_page_element
+  - @reminders.each do |reminder|
+    %p= link_to reminder.name, reminder
+= paginate @reminders

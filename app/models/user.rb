@@ -11,6 +11,7 @@ class User < ApplicationRecord
 
   has_many :cars, dependent: :destroy
   has_many :maintenances, through: :cars
+  has_many :reminders, through: :cars
   enum language: { pl: 0, en: 1 }
 
   validates :name, presence: true
