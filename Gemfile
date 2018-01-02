@@ -28,7 +28,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # Views
-gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'haml-rails', '~> 1.0'
 gem 'jquery-rails'
@@ -58,7 +58,7 @@ end
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'overcommit', '~> 0.41.0', require: false
-  gem 'rubocop', '~> 0.51.0', require: false
+  gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
