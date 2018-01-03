@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :reminders
     resources :maintenances
     resources :workshops
+    resources :mileages
 
     root 'regular_users#index'
   end
