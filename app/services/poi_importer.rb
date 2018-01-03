@@ -4,13 +4,19 @@ require 'csv'
 
 class PoiImporter
   def import_from_csv(path_to_csv, kind)
+    rows = []
+    exist = []
     CSV.foreach(path_to_csv) do |row|
-      if find_poi(row[0], row[1])
-        puts 'Already exist'
+      longitude = row[0]
+      latitude = row[1]
+      if find_poi(longitude, latitude)
+        exist.push({longitude: longitude, latitude: latitude, kind: kind})
       else
-        create(row[0], row[1], kind)
+        rows.push({longitude: longitude, latitude: latitude, kind: kind}) unless longitude.nil? || latitude.nil?
       end
     end
+    puts "Already exist: #{exist.count} workshops"
+    create(rows)
   end
 
   def import_all_files(path)
@@ -34,15 +40,11 @@ class PoiImporter
   end
 
   def find_poi(longitude, latitude)
-    Workshop.find_by(longitude: longitude, latitude: latitude)
+    Workshop.exists?(longitude: longitude, latitude: latitude)
   end
 
-  def create(longitude, latitude, kind)
-    if longitude.nil? || latitude.nil?
-      puts 'Not imported: missing attributes'
-    else
-      Workshop.create(kind: kind, longitude: longitude, latitude: latitude)
-      puts "Created: kind: #{kind}, longitude: #{longitude}, latitude: #{latitude}"
-    end
+  def create(rows)
+    Workshop.create(rows)
+    puts "Imported: #{rows.count} workshops"
   end
 end
