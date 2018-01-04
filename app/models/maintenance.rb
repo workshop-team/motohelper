@@ -5,4 +5,6 @@ class Maintenance < ApplicationRecord
 
   belongs_to :car
   validates :name, presence: true
+
+  scope :most_recent, ->(limit) { limit(limit).order(created_at: :desc) }
 end
