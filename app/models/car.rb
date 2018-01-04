@@ -6,4 +6,5 @@ class Car < ApplicationRecord
   belongs_to :user
   has_many :maintenances, dependent: :destroy
   has_many :reminders, dependent: :destroy
+  has_many :mileages, dependent: :destroy
 end

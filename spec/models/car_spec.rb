@@ -6,4 +6,5 @@ RSpec.describe Car, type: :model do
   it { should belong_to(:user) }
   it { should have_many(:maintenances) }
   it { should have_many(:reminders) }
+  it { should have_many(:mileages) }
 end

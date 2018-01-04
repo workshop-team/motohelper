@@ -33,6 +33,10 @@ pl:
         one: 'Warsztat'
         other: 'Warsztaty'
 
+      mileage:
+        one: 'Przebieg'
+        other: 'Przebiegi'
+
     attributes:
       user:
         avatar: 'Awatar'
@@ -63,3 +67,6 @@ pl:
         latitude: 'szerokość geograficzna'
         longitude: 'długość geograficzna'
 
+      mileage:
+        meter_status: 'Stan licznika'
+        date: 'Data'
