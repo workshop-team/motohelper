@@ -1,6 +1,12 @@
 pl:
   auth_admin_alert: 'Strona dostępna tylko dla administratorów'
 
+  pages:
+    dashboard_blocks:
+      maintenance:
+        last_added: 'Ostatnio dodane'
+        all: 'Wszystkie usługi serwisowe'
+
   activerecord:
     models:
       regular_user:
@@ -60,6 +66,7 @@ pl:
         kind: 'Rodzaj'
         latitude: 'szerokość geograficzna'
         longitude: 'długość geograficzna'
+
       mileage:
         meter_status: 'Stan licznika'
         date: 'Data'

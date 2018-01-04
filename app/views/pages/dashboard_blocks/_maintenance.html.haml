@@ -1,1 +1,11 @@
-%p #{ data[:maintenance] }
+%h4 #{ t('.last_added') } (#{ link_to t('.all'), maintenances_path })
+
+%table.table.table-sm
+  %tr
+    %th name
+    %th car
+
+  - data[:maintenances].each do |maintenance|
+    %tr
+      %td= link_to maintenance.name, maintenance
+      %td= maintenance.car.decorate.name
