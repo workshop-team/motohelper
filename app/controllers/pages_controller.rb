@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   def dashboard
     @data = {}
 
-    @data[:cars] = 'Volvo S80 KBR 007'
+    @data[:cars] = current_user.cars.decorate
     @data[:closest_service] = '28-12-17 12:15'
     @data[:maintenances] = current_user.maintenances.most_recent(5)
     @data[:mileage] = '153324km'
