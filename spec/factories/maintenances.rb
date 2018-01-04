@@ -2,10 +2,10 @@
 
 FactoryBot.define do
   factory :maintenance do
-    name 'MyString'
-    mileage 1
-    warranty_date '2017-12-17'
-    note 'MyText'
-    car nil
+    name 'Change motor'
+    mileage 145_000
+    warranty_date 12.months.since
+    note 'Note'
+    car
   end
 end

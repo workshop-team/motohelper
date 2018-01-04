@@ -2,6 +2,8 @@
 
 module Admin
   class ApplicationController < Administrate::ApplicationController
+    include Localization
+
     before_action :authenticate_user!
     before_action :authenticate_admin
 
