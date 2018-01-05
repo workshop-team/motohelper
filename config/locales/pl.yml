@@ -5,11 +5,11 @@ pl:
     dashboard_blocks:
       maintenance:
         last_added: &last_added 'Ostatnio dodane'
-        all: &all 'Wszystkie usługi serwisowe'
+        all:  'Wszystkie usługi serwisowe'
 
-      reminder:
+      reminders:
         last_added: *last_added
-         all: *all
+        all: 'Wszystkie przypomnienia'
 
       mileage:
         last_added: *last_added
