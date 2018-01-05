@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Mileage < ApplicationRecord
+  include MostRecentable
+
   acts_as_paranoid
 
   belongs_to :car
