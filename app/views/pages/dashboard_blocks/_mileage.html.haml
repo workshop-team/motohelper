@@ -1,1 +1,13 @@
-%p #{ data[:mileage] }
+%h4 #{ t('.last_added') }
+
+%table.table.table-sm
+  %tr
+    %th car
+    %th mileages
+    %th date
+
+  - data[:mileages].each do |mileage|
+    %tr
+      %td= mileage.car.decorate.name
+      %td= mileage.meter_status
+      %td= mileage.date

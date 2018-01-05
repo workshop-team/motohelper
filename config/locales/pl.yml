@@ -4,8 +4,11 @@ pl:
   pages:
     dashboard_blocks:
       maintenance:
-        last_added: 'Ostatnio dodane'
+        last_added: &last_added 'Ostatnio dodane'
         all: 'Wszystkie usługi serwisowe'
+
+      mileage:
+        last_added: *last_added
 
   activerecord:
     models:
