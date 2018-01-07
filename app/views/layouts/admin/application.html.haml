@@ -1,16 +1,19 @@
 !!!
 %html
-  %body
+  %head
     %meta{:charset => "utf-8"}/
     %meta{:content => "NOODP", :name => "ROBOTS"}/
     %meta{:content => "initial-scale=1", :name => "viewport"}/
+    = render "layouts/icons"
     %title
       = content_for(:title)
       \- #{Rails.application.class.parent_name.titlecase}
     = render "stylesheet"
     = csrf_meta_tags
-    = render "icons"
-    = render 'layouts/header'
+
+  %body
+    = render 'layouts/header_administrate'
+
     .app-container
       = render "navigation"
       %main.main-content{:role => "main"}
