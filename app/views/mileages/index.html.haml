@@ -2,9 +2,9 @@
   %table.table.table-hover
     %thead
       %tr
-        %th{:scope => "col"} Car
-        %th{:scope => "col"} Mileage
-        %th{:scope => "col"} Date
+        %th{:scope => "col"} #{t('.car')}
+        %th{:scope => "col"} #{t('.meter_status')}
+        %th{:scope => "col"} #{t('.date')}
     %tbody
       - @mileages.each do |mileage|
         %tr
