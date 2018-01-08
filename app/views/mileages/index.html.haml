@@ -1,0 +1,4 @@
+.autopagerize_page_element
+  - @mileages.each do |mileage|
+    %p #{ link_to mileage.meter_status, mileage }
+= paginate @mileages

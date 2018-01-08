@@ -13,6 +13,7 @@ pl:
 
       mileage:
         last_added: *last_added
+        all: 'Rejestr przebiegów'
 
   activerecord:
     models:
