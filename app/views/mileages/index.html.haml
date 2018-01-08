@@ -1,4 +1,15 @@
 .autopagerize_page_element
-  - @mileages.each do |mileage|
-    %p #{ link_to mileage.meter_status, mileage }
+  %table.table.table-hover
+    %thead
+      %tr
+        %th{:scope => "col"} Car
+        %th{:scope => "col"} Mileage
+        %th{:scope => "col"} Date
+    %tbody
+      - @mileages.each do |mileage|
+        %tr
+          %td #{ mileage.car.decorate.name }
+          %td #{ link_to mileage.meter_status, mileage }
+          %td #{ mileage.date }
+
 = paginate @mileages

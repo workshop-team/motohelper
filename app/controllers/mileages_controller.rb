@@ -2,7 +2,7 @@
 
 class MileagesController < ApplicationController
   def index
-    @mileages = current_user.mileages.page params[:page]
+    @mileages = current_user.mileages.order(:car_id, meter_status: :asc).page params[:page]
   end
 
   def show
