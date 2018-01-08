@@ -19,7 +19,7 @@ class SampleData
   def add_cars
     rand(1..4).times do
       @mileage = rand(50_000..200_000)
-      @car_date = Date.today - 2.months
+      @car_date = 2.months.ago
       @fancy_car = DataSets.brand_model
       puts "..#{@fancy_car}"
 
