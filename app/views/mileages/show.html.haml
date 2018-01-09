@@ -1,9 +1,9 @@
 %p
-  %strong #{t('.car')}:
+  %strong #{ Car.model_name.human }:
   = @mileage.car.decorate.name
 %p
-  %strong #{t('.meter_status')}:
+  %strong #{ Mileage.human_attribute_name :meter_status }:
   = @mileage.meter_status
 %p
-  %strong #{t('.date')}:
+  %strong #{ Mileage.human_attribute_name :date }:
   = @mileage.date

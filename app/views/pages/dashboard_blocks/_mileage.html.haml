@@ -2,9 +2,9 @@
 
 %table.table.table-sm
   %tr
-    %th car
-    %th mileages
-    %th date
+    %th= Car.model_name.human
+    %th= Mileage.human_attribute_name :meter_status
+    %th= Mileage.human_attribute_name :date
 
   - data[:mileages].each do |mileage|
     %tr

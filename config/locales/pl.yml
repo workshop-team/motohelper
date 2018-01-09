@@ -1,17 +1,6 @@
 pl:
   auth_admin_alert: 'Strona dostępna tylko dla administratorów'
 
-  mileages:
-    index:
-      meter_status: &meter_status 'Stan licznika'
-      car: &car 'Samochód'
-      date: &date 'Data'
-    show:
-      meter_status: *meter_status
-      car: *car
-      date: *date
-
-
   pages:
     dashboard_blocks:
       maintenance:
@@ -89,3 +78,7 @@ pl:
       mileage:
         meter_status: 'Stan licznika'
         date: 'Data'
+
+  errors:
+    rescue:
+      record_not_found: 'Wpis nie został znaleziony. Sprawdź poprawność URL lub skontaktuj się z administratorem.'
