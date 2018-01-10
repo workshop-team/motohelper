@@ -13,6 +13,7 @@ pl:
 
       mileage:
         last_added: *last_added
+        all: 'Rejestr przebiegów'
 
   activerecord:
     models:
@@ -77,3 +78,7 @@ pl:
       mileage:
         meter_status: 'Stan licznika'
         date: 'Data'
+
+  errors:
+    rescue:
+      record_not_found: 'Wpis nie został znaleziony. Sprawdź poprawność URL lub skontaktuj się z administratorem.'
