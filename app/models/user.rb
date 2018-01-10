@@ -11,8 +11,8 @@ class User < ApplicationRecord
 
   has_many :cars, dependent: :destroy
   has_many :maintenances, -> { includes(:car) }, through: :cars
-  has_many :reminders, through: :cars
-  has_many :mileages, through: :cars
+  has_many :reminders, -> { includes(:car) }, through: :cars
+  has_many :mileages, -> { includes(:car) }, through: :cars
 
   enum language: { pl: 0, en: 1 }
 
