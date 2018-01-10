@@ -35,6 +35,7 @@ gem 'haml-rails', '~> 1.0'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'mini_magick'
+gem 'simple_form'
 
 # Default locales
 gem 'rails-i18n', '~> 5.0.0'
