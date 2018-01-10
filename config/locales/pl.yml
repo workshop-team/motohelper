@@ -6,40 +6,14 @@ pl:
       maintenance:
         last_added: &last_added 'Ostatnio dodane'
         all:  'Wszystkie usługi serwisowe'
-        mileage: &mileage 'Przebieg'
-        car: &car 'Samochód'
-        name: &name 'Nazwa'
-
 
       reminders:
         last_added: *last_added
         all: 'Wszystkie przypomnienia'
-        name: *name
-        car: *car
 
       mileage:
         last_added: *last_added
-        date: &date 'Data'
-
-      cars:
-        last_added: *last_added
-
-      closest_service:
-        closest_service: &closest_service 'Najbliższy serwis'
-        date: *date
-
-      mileage:
-        last_added: *last_added
-        car: *car
-        mileage: *mileage
-        date: *date
-
-    dashboard:
-      cars: 'Samochody'
-      reminders: 'Przypomnienia'
-      maintenance: 'Serwis'
-      closest_service: *closest_service
-      mileage: *mileage
+        all: 'Rejestr przebiegów'
 
   activerecord:
     models:
@@ -95,6 +69,7 @@ pl:
         mileage: 'Przebieg'
         warranty_date: 'Data gwarancji'
         note: 'Notatka'
+        closest_service: 'Najbliższy serwis'
 
       workshop:
         kind: 'Rodzaj'
@@ -104,3 +79,7 @@ pl:
       mileage:
         meter_status: 'Stan licznika'
         date: 'Data'
+
+  errors:
+    rescue:
+      record_not_found: 'Wpis nie został znaleziony. Sprawdź poprawność URL lub skontaktuj się z administratorem.'
