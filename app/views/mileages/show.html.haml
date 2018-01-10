@@ -1,0 +1,9 @@
+%p
+  %strong #{ Car.model_name.human }:
+  = @mileage.car.decorate.name
+%p
+  %strong #{ Mileage.human_attribute_name :meter_status }:
+  = @mileage.meter_status
+%p
+  %strong #{ Mileage.human_attribute_name :date }:
+  = @mileage.date

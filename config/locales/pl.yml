@@ -16,6 +16,7 @@ pl:
 
       mileage:
         last_added: *last_added
+        all: 'Rejestr przebiegów'
 
   activerecord:
     models:
@@ -87,3 +88,7 @@ pl:
           attributes:
             car:
               required: 'Bez samochodzika ani rusz :)'
+
+  errors:
+    rescue:
+      record_not_found: 'Wpis nie został znaleziony. Sprawdź poprawność URL lub skontaktuj się z administratorem.'

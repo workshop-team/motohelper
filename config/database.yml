@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: motohelper_production
+  database: motohelper
   username: motohelper
   password: <%= ENV['MOTOHELPER_DATABASE_PASSWORD'] %>
