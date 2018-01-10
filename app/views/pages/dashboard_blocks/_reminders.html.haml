@@ -1,11 +1,12 @@
 %h4 #{ t('.last_added') } (#{ link_to t('.all'), reminders_path })
 
 %table.table.table-sm
-  %tr
-    %th name
-    %th car
-
-  - data[:reminders].each do |reminder|
+  %thead
     %tr
-      %td= link_to reminder.name, reminder
-      %td= reminder.car.decorate.name
+      %th{scope: 'col'} Name
+      %th{scope: 'col'} Car
+  %tbody
+    - data[:reminders].each do |reminder|
+      %tr
+        %td= link_to reminder.name, reminder
+        %td=  reminder.car.decorate.name
