@@ -6,20 +6,40 @@ pl:
       maintenance:
         last_added: &last_added 'Ostatnio dodane'
         all:  'Wszystkie usługi serwisowe'
+        mileage: &mileage 'Przebieg'
+        car: &car 'Samochód'
+        name: &name 'Nazwa'
+
 
       reminders:
         last_added: *last_added
         all: 'Wszystkie przypomnienia'
+        name: *name
+        car: *car
 
       mileage:
         last_added: *last_added
+        date: &date 'Data'
 
       cars:
         last_added: *last_added
 
       closest_service:
-        closest_service: 'Najbliższy serwis'
+        closest_service: &closest_service 'Najbliższy serwis'
+        date: *date
 
+      mileage:
+        last_added: *last_added
+        car: *car
+        mileage: *mileage
+        date: *date
+
+    dashboard:
+      cars: 'Samochody'
+      reminders: 'Przypomnienia'
+      maintenance: 'Serwis'
+      closest_service: *closest_service
+      mileage: *mileage
 
   activerecord:
     models:

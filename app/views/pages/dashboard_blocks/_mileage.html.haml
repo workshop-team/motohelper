@@ -3,9 +3,9 @@
 %table.table.table-sm
   %thead
     %tr
-      %th{scope: 'col'} Car
-      %th{scope: 'col'} Mileages
-      %th{scope: 'col'} Date
+      %th{scope: 'col'} #{ t('.car') }
+      %th{scope: 'col'} #{ t('.mileage') }
+      %th{scope: 'col'} #{ t('.date') }
   %tbody
     - data[:mileages].each do |mileage|
       %tr

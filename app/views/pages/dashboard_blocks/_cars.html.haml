@@ -1,10 +1,3 @@
-%h4 #{ t('.last_added')}
-
-%table.table.table-sm
-  %thead
-    %tr
-      %th{scope: 'col'} Name
-  %tbody
-    - data[:cars].each do |car|
-      %tr
-        %td= car.decorate.name
+%ul.list-group
+  - data[:cars].each do |car|
+    %li.list-group-item.bg-secondary #{car.name}

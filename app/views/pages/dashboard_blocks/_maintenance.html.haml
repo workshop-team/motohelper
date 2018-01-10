@@ -3,8 +3,8 @@
 %table.table.table-sm
   %thead
     %tr
-      %th{scope: 'col'} First
-      %th{scope: 'col'} Car
+      %th{scope: 'col'} #{t('.name')}
+      %th{scope: 'col'} #{t('.car')}
   %tbody
     - data[:maintenances].each do |maintenance|
       %tr
