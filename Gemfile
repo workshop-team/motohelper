@@ -57,6 +57,13 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-scm-gitcopy'
+  # gem 'capistrano-sidekiq'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'overcommit', '~> 0.41.0', require: false
   gem 'rubocop', require: false
