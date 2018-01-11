@@ -2,6 +2,9 @@ pl:
   auth_admin_alert: 'Strona dostępna tylko dla administratorów'
 
   pages:
+    dashboard:
+      closest_service: &closest_service 'Najbliższy serwis'
+
     dashboard_blocks:
       maintenance:
         last_added: &last_added 'Ostatnio dodane'
@@ -14,6 +17,9 @@ pl:
       mileage:
         last_added: *last_added
         all: 'Rejestr przebiegów'
+
+      closest_service:
+        closest_service: *closest_service
 
   activerecord:
     models:
@@ -69,7 +75,6 @@ pl:
         mileage: 'Przebieg'
         warranty_date: 'Data gwarancji'
         note: 'Notatka'
-        closest_service: 'Najbliższy serwis'
 
       workshop:
         kind: 'Rodzaj'
