@@ -46,6 +46,7 @@ gem 'administrate-field-select', '~> 2.0', require: 'administrate/field/select_b
 gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-i18n'
 gem 'devise'
+gem 'httparty', '~> 0.15.6'
 gem 'paranoia', '~> 2.2'
 
 group :development, :test do
