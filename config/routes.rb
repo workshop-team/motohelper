@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
 
-  resources :maintenances, only: %i[show index], concerns: :paginatable
+  resources :maintenances, except: :destroy, concerns: :paginatable
+  resources :mileages, only: %i[show index], concerns: :paginatable
   resources :reminders, only: %i[show index], concerns: :paginatable
   resources :dashboard, only: :index
 

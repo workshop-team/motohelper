@@ -1,5 +1,8 @@
 pl:
   auth_admin_alert: 'Strona dostępna tylko dla administratorów'
+  message_of_addition: 'Record został pomyślnie dodany'
+  message_of_modification: 'Record został pomyślnie zmodyfikowany'
+  choose_option: 'Wybierz z list'
 
   pages:
     dashboard:
@@ -17,7 +20,7 @@ pl:
       mileage:
         last_added: *last_added
         all: 'Rejestr przebiegów'
-
+        
       closest_service:
         closest_service: *closest_service
 
@@ -84,6 +87,13 @@ pl:
       mileage:
         meter_status: 'Stan licznika'
         date: 'Data'
+
+    errors:
+      models:
+        maintenance:
+          attributes:
+            car:
+              required: 'Bez samochodzika ani rusz :)'
 
   errors:
     rescue:
