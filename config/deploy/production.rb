@@ -5,7 +5,6 @@ server(
 )
 
 set :rails_env, 'production'
-# set :rvm_type, :user
 set :rvm_ruby_version, '2.5.0@motohelper'
 
 # server-based syntax
