@@ -17,7 +17,7 @@ append(
   'tmp/pids',
   'tmp/cache',
   'tmp/sockets',
-  'public/system'
+  'public/uploads'
 )
 
 set :keep_releases, 5
