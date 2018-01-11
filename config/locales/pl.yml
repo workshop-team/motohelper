@@ -5,6 +5,9 @@ pl:
   choose_option: 'Wybierz z list'
 
   pages:
+    dashboard:
+      closest_service: &closest_service 'Najbliższy serwis'
+
     dashboard_blocks:
       maintenance:
         last_added: &last_added 'Ostatnio dodane'
@@ -17,6 +20,9 @@ pl:
       mileage:
         last_added: *last_added
         all: 'Rejestr przebiegów'
+        
+      closest_service:
+        closest_service: *closest_service
 
   activerecord:
     models:
