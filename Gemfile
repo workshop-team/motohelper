@@ -51,6 +51,7 @@ gem 'paranoia', '~> 2.2'
 
 group :development, :test do
   gem 'awesome_print'
+  gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-byebug'
