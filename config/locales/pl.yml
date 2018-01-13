@@ -5,6 +5,12 @@ pl:
   message_of_deletion: 'Rekord został pomyśnie usunięty'
   choose_option: 'Wybierz z list'
 
+  maintenances:
+    index:
+      edit: 'Edycja'
+      destroy: 'Usuń'
+      add_new: 'Dodaj nowy wpis'
+
   pages:
     dashboard:
       closest_service: &closest_service 'Najbliższy serwis'
