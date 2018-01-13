@@ -1,4 +1,14 @@
 .autopagerize_page_element
-  - @maintenances.each do |maintenance|
-    %p= link_to maintenance.name, maintenance
+
+  %table.table.table-hover
+    %thead
+      %tr
+        %th{scope: 'col'}= Maintenance.model_name.human
+        %th{scope: 'col'}= Car.model_name.human
+
+      - @maintenances.each do |maintenance|
+        %tr
+          %td= link_to maintenance.name, maintenance
+          %td= maintenance.car.decorate.name
+
 = paginate @maintenances
