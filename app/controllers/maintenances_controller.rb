@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class MaintenancesController < ApplicationController
-  before_action :find_maintenance, only: %i[show edit update]
+  before_action :find_maintenance, only: %i[show edit update destroy]
 
   def index
     @maintenances = current_user.maintenances.page params[:page]
@@ -27,6 +27,11 @@ class MaintenancesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @maintenance.destroy
+    redirect_to maintenances_path, notice: I18n.t('message_of_deletion')
   end
 
   private

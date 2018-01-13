@@ -1,14 +1,18 @@
-.autopagerize_page_element
+=link_to 'Add new', new_maintenance_path(@maintenance), class: 'btn btn-primary'
 
+.autopagerize_page_element
   %table.table.table-hover
     %thead
       %tr
         %th{scope: 'col'}= Maintenance.model_name.human
         %th{scope: 'col'}= Car.model_name.human
+        %th{scope: 'col', colspan: '2'}
 
       - @maintenances.each do |maintenance|
         %tr
           %td= link_to maintenance.name, maintenance
           %td= maintenance.car.decorate.name
+          %td= link_to 'Edit', edit_maintenance_path(maintenance)
+          %td= link_to 'Destroy', maintenance, method: :delete, data: { confirm: 'Are you sure?' }
 
 = paginate @maintenances
