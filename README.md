@@ -11,6 +11,9 @@ if you use HTTPS
 
 ```
 cd motohelper
+  
+Change name of file '.env_sample' to '.env' and make your own settings.  
+  
 gem install bundler
 brew install imagemagick (on OSX) or sudo apt-get install ruby-mini-magick (on Ubuntu)
 bundle
