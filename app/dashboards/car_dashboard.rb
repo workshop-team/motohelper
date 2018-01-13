@@ -52,12 +52,10 @@ class CarDashboard < Administrate::BaseDashboard
     brand
     model
     registration_number
-    maintenances
-    reminders
-    mileages
+    user
   ].freeze
 
   def display_resource(car)
-    "#{car.brand} #{car.model}: #{car.registration_number}"
+    car.decorate.name
   end
 end

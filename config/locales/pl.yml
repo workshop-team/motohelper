@@ -20,7 +20,7 @@ pl:
       mileage:
         last_added: *last_added
         all: 'Rejestr przebiegów'
-        
+
       closest_service:
         closest_service: *closest_service
 
@@ -94,6 +94,10 @@ pl:
           attributes:
             car:
               required: 'Bez samochodzika ani rusz :)'
+        car:
+          attributes:
+            user:
+              required: 'No jak tak bez użytkownika?'
 
   errors:
     rescue:
