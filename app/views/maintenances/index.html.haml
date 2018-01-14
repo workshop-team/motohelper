@@ -8,7 +8,6 @@
         %th{scope: 'col'}= Car.model_name.human
         %th{scope: 'col', colspan: '2'}
 
-      - @maintenances.each do |maintenance|
         = render @maintenances
 
 = paginate @maintenances
