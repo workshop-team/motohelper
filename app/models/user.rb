@@ -17,6 +17,7 @@ class User < ApplicationRecord
   enum language: { pl: 0, en: 1 }
 
   validates :name, presence: true
+  validates :email, uniqueness: true
 
   def admin?
     type == 'AdminUser'
