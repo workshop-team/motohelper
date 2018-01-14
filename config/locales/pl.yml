@@ -4,12 +4,10 @@ pl:
   message_of_modification: 'Record został pomyślnie zmodyfikowany'
   message_of_deletion: 'Rekord został pomyśnie usunięty'
   choose_option: 'Wybierz z list'
-
-  maintenances:
-    index:
-      edit: 'Edycja'
-      destroy: 'Usuń'
-      add_new: 'Dodaj nowy wpis'
+  are_you_sure: 'Czy jeteś pewny?'
+  add_new: 'Dodaj nowy wpis'
+  destroy: 'Usuń'
+  edit: 'Edycja'
 
   pages:
     dashboard:
