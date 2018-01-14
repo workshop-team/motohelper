@@ -3,6 +3,7 @@
 Rails.application.routes.draw do
   get 'home' => 'pages#home'
   get 'dashboard' => 'pages#dashboard'
+  get 'find_nearby' => 'find_nearby#index'
 
   concern :paginatable do
     get '(page/:page)', action: :index, on: :collection, as: ''
