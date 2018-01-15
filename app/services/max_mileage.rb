@@ -11,4 +11,8 @@ class MaxMileage
       mileage << car.maintenances.maximum(:mileage)
     end.compact.max || 0
   end
+
+  def self.value_ok?(car_id, entered_value)
+    value(car_id) <= entered_value
+  end
 end
