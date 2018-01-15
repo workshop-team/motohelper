@@ -1,10 +1,11 @@
 pl:
   auth_admin_alert: 'Strona dostępna tylko dla administratorów'
   message_of_addition: 'Record został pomyślnie dodany'
+  message_of_addition_worse_mileage: 'Wpis został zapisany ale podales nieprawidlowy przebieg, popraw się Łobuzie!'
   message_of_modification: 'Record został pomyślnie zmodyfikowany'
-  message_of_deletion: 'Rekord został pomyśnie usunięty'
+  message_of_deletion: 'Rekord został pomyślnie usunięty'
   choose_option: 'Wybierz z list'
-  are_you_sure: 'Czy jeteś pewny?'
+  are_you_sure: 'Czy jesteś pewny?'
   add_new: 'Dodaj nowy wpis'
   destroy: 'Usuń'
   edit: 'Edycja'
