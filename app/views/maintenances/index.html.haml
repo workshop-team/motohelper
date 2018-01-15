@@ -6,8 +6,9 @@
       %tr
         %th{scope: 'col'}= Maintenance.model_name.human
         %th{scope: 'col'}= Car.model_name.human
+        %th{scope: 'col'}= Maintenance.human_attribute_name(:mileage)
         %th{scope: 'col', colspan: '2'}
 
-        = render @maintenances
+      = render @maintenances
 
 = paginate @maintenances
