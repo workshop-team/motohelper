@@ -15,7 +15,7 @@ class PoiImporter
     create(rows, path_to_csv)
   end
 
-  def import_all_files(path)
+  def import_single_file(path)
     Dir.foreach(path) do |file|
       next if ['.', '..', '.DS_Store'].include? file
       if find_kind(file).is_a?(Hash)
