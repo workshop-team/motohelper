@@ -7,4 +7,6 @@ class Car < ApplicationRecord
   has_many :maintenances, dependent: :destroy
   has_many :reminders, dependent: :destroy
   has_many :mileages, dependent: :destroy
+
+  validates :brand, :model, :registration_number, presence: true
 end

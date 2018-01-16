@@ -1,0 +1,6 @@
+%tr
+  %td= link_to maintenance.name, maintenance
+  %td= maintenance.car.decorate.name
+  %td= maintenance.mileage
+  %td= link_to t('edit'), edit_maintenance_path(maintenance)
+  %td= link_to t('destroy'), maintenance, method: :delete, data: { confirm: t('are_you_sure') }

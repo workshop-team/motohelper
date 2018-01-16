@@ -1,7 +1,19 @@
 pl:
   auth_admin_alert: 'Strona dostępna tylko dla administratorów'
+  message_of_addition: 'Record został pomyślnie dodany'
+  message_of_addition_worse_mileage: 'Wpis został zapisany ale podales nieprawidlowy przebieg, popraw się Łobuzie!'
+  message_of_modification: 'Record został pomyślnie zmodyfikowany'
+  message_of_deletion: 'Rekord został pomyślnie usunięty'
+  choose_option: 'Wybierz z list'
+  are_you_sure: 'Czy jesteś pewny?'
+  add_new: 'Dodaj nowy wpis'
+  destroy: 'Usuń'
+  edit: 'Edycja'
 
   pages:
+    dashboard:
+      closest_service: &closest_service 'Najbliższy serwis'
+
     dashboard_blocks:
       maintenance:
         last_added: &last_added 'Ostatnio dodane'
@@ -14,6 +26,9 @@ pl:
       mileage:
         last_added: *last_added
         all: 'Rejestr przebiegów'
+
+      closest_service:
+        closest_service: *closest_service
 
   activerecord:
     models:
@@ -78,6 +93,17 @@ pl:
       mileage:
         meter_status: 'Stan licznika'
         date: 'Data'
+
+    errors:
+      models:
+        maintenance:
+          attributes:
+            car:
+              required: 'Bez samochodzika ani rusz :)'
+        car:
+          attributes:
+            user:
+              required: 'No jak tak bez użytkownika?'
 
   errors:
     rescue:

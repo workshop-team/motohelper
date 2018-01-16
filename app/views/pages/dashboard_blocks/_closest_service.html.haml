@@ -1,1 +1,9 @@
-%p #{ data[:closest_service] }
+%h4= t('.closest_service')
+
+%table.table.table-sm
+  %thead
+    %tr
+      %th{scope: 'col'}= Mileage.human_attribute_name('date')
+  %tbody
+    %tr
+      %td #{ data[:closest_service] }

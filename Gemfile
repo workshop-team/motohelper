@@ -35,6 +35,7 @@ gem 'haml-rails', '~> 1.0'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'mini_magick'
+gem 'simple_form'
 
 # Default locales
 gem 'rails-i18n', '~> 5.0.0'
@@ -51,6 +52,7 @@ gem 'paranoia', '~> 2.2'
 
 group :development, :test do
   gem 'awesome_print'
+  gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-byebug'
@@ -58,6 +60,12 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-scm-gitcopy'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'overcommit', '~> 0.41.0', require: false
   gem 'rubocop', require: false

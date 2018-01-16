@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 class SampleData
-  def perform
+  def generate
     puts 'Start inserting sample data...'
 
     10.times do
       @user = RegularUser.create!(
-        name: Faker::Name.name, email: Faker::Internet.email,
+        name: Faker::Name.name, email: Faker::Internet.email, confirmed_at: Date.today,
         password: Faker::Internet.password, remote_avatar_url: Faker::Avatar.image
       )
       puts ".#{@user.name}"
