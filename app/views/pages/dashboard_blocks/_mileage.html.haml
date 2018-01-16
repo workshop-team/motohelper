@@ -1,14 +1,15 @@
-%h4 #{ t('.last_added') } (#{ link_to t('.all'), mileages_path })
+%p.card-text
+  %h5 #{ t('.last_added') } (#{ link_to t('.all'), mileages_path })
 
-%table.table.table-sm
-  %thead
-    %tr
-      %th{scope: 'col'}= Car.model_name.human
-      %th{scope: 'col'}= Mileage.model_name.human
-      %th{scope: 'col'}= Mileage.human_attribute_name('date')
-  %tbody
-    - data[:mileages].each do |mileage|
+  %table.table.table-sm
+    %thead
       %tr
-        %td= mileage.car.decorate.name
-        %td= mileage.meter_status
-        %td= mileage.date
+        %th{scope: 'col'}= Car.model_name.human
+        %th{scope: 'col'}= Mileage.model_name.human
+        %th{scope: 'col'}= Mileage.human_attribute_name('date')
+    %tbody
+      - data[:mileages].each do |mileage|
+        %tr
+          %td= mileage.car.decorate.name
+          %td= mileage.meter_status
+          %td= mileage.date

@@ -1,12 +1,13 @@
-%h4 #{ t('.last_added') } (#{ link_to t('.all'), maintenances_path })
+%p.card-text
+  %h5 #{ t('.last_added') } (#{ link_to t('.all'), maintenances_path })
 
-%table.table.table-sm
-  %thead
-    %tr
-      %th{scope: 'col'}= Maintenance.model_name.human
-      %th{scope: 'col'}= Car.model_name.human
-  %tbody
-    - data[:maintenances].each do |maintenance|
+  %table.table.table-sm
+    %thead
       %tr
-        %td= link_to maintenance.name, maintenance
-        %td= maintenance.car.decorate.name
+        %th{scope: 'col'}= Maintenance.model_name.human
+        %th{scope: 'col'}= Car.model_name.human
+    %tbody
+      - data[:maintenances].each do |maintenance|
+        %tr
+          %td= link_to maintenance.name, maintenance
+          %td= maintenance.car.decorate.name
