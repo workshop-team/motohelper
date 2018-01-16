@@ -1,12 +1,20 @@
 %p
-  %strong Name:
+  %strong= Maintenance.human_attribute_name(:name)
   = @maintenance.name
+
+  %p
+    %strong= Car.model_name.human
+    = @maintenance.car.decorate.name
+  
 %p
-  %strong Note:
+  %strong= Maintenance.human_attribute_name(:warranty_date)
+  = l @maintenance.warranty_date
+%p
+  %strong= Maintenance.human_attribute_name(:mileage)
+  = @maintenance.decorate.mileage
+
+%p
+  %strong= Maintenance.human_attribute_name(:note)
   = @maintenance.note
-%p
-  %strong Warranty date:
-  = @maintenance.warranty_date
-%p
-  %strong Mileage:
-  = @maintenance.mileage
+
+= link_to t('edit'), edit_maintenance_path(@maintenance), class: 'btn btn-success'
