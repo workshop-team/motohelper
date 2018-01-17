@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     @data = {}
 
     @data[:cars] = current_user.cars.decorate
-    @data[:closest_service] = '28-12-17 12:15'
+    @data[:closest_service] = nil
     @data[:maintenances] = current_user.maintenances.most_recent(5)
     @data[:mileages] = current_user.mileages.most_recent(5).decorate
     @data[:reminders] = current_user.reminders.most_recent(5)
