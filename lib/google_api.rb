@@ -2,7 +2,7 @@
 
 require 'httparty'
 module GoogleApi
-  FIND_OBJECT_NEARBY_RADIUS = 100
+  FIND_OBJECT_NEARBY_RADIUS = 1000
   CAR_REPAIR_TYPE = 'car_repair'
   CAR_DEALER_TYPE = 'car_dealer'
   API_MAPS_URL = 'https://maps.googleapis.com/maps/api/place'
