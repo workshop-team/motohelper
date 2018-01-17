@@ -42,3 +42,16 @@ code {
 a.navbar-brand{
   padding: 0.75rem 0 0.75rem 0;
 }
+@media (max-width: 950px) {
+  .card-deck {
+    display: block;
+    width: 100%;
+    margin-bottom: .75rem;
+    table-layout: fixed;
+    border-spacing: 1.25rem 0;
+  }
+  .container{
+    max-width:930px;
+  }
+
+}

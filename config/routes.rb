@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'dashboard' => 'pages#dashboard'
   get 'find_nearby' => 'pages#find_nearby'
 
+  post 'requests/user_position'
+
   concern :paginatable do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
