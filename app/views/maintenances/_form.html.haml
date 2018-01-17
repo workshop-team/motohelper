@@ -1,7 +1,7 @@
 = simple_form_for @maintenance do |f|
   = f.input :name, as: :string
   = f.input :mileage, as: :integer
-  = f.input :warranty_date, as: :date
+  = f.input :warranty_date, as: :string, input_html: {id: 'datepicker'}
   = f.input :note, as: :text
   = f.association :car, collection: current_user.cars.decorate, label_method: :name, prompt: t('choose_option')
   = f.button :submit
