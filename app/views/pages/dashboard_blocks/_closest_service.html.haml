@@ -1,10 +1,4 @@
-%p.card-text
-  %h5= t('.closest_service')
+%button{onclick: "Dashboard.setLocation()"} Update location
+#position_info
 
-  %table.table.table-sm
-    %thead
-      %tr
-        %th{scope: 'col'}= Mileage.human_attribute_name('date')
-    %tbody
-      %tr
-        %td #{ data[:closest_service] }
+#{ data[:closest_service] }
