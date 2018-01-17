@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class FindNearby
-  AVAILABLE_PLACES=['car_dealer', 'car_rental', 'car_wash', 'car_repair', 'gas_station', 'parking']
+  AVAILABLE_PLACES = %w[car_dealer car_rental car_wash car_repair gas_station parking].freeze
   def find_places(latitude, longitude)
     places = {}
     AVAILABLE_PLACES.each do |place|
