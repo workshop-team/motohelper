@@ -12,8 +12,6 @@ class ReminderService
   end
 
   def send_email(reminder)
-    reminder.name
-
     ActiveRecord::Base.transaction do
       reminder.update(sended: Date.today)
       ReminderMailer.reminder_email(reminder).deliver_now
