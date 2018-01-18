@@ -9,6 +9,7 @@ pl:
   add_new: 'Dodaj nowy wpis'
   destroy: 'Usuń'
   edit: 'Edycja'
+  see: 'Zobacz'
 
   pages:
     dashboard:

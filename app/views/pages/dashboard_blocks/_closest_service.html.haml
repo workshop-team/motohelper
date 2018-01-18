@@ -1,4 +1,12 @@
-%button{onclick: "Dashboard.setLocation()"} Update location
+.text-center
+  %button.btn.btn-primary{onclick: "Dashboard.setLocation()"} Update location
 #position_info
 
-#{ data[:closest_service] }
+%table.table.table-hover
+  %tbody
+    - data[:closest_service].first(3).each do |service|
+      %tr
+        %td #{service['name']}
+        %td #{service['vicinity']}
+        %td
+          %button.btn.btn-light{:type => "button"} #{I18n.t('see')}
