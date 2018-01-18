@@ -13,6 +13,8 @@ class MaxMileage
   end
 
   def self.value_ok?(car_id, entered_value)
+    return true unless entered_value.present?
+
     value(car_id) <= entered_value
   end
 end
