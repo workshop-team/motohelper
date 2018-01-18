@@ -7,7 +7,7 @@ class RequestsController < ApplicationController
     save_user_location
 
     data = {}
-    data[:closest_service] = 'tutaj trzeba podlaczyc Service z hashem'
+    data[:closest_service] = find_nearby
 
     render json: {
       content: (
@@ -17,6 +17,10 @@ class RequestsController < ApplicationController
   end
 
   private
+
+  def find_nearby
+    FindNearby.new.find_places(current_user.latitude, current_user.longitude)
+  end
 
   def save_user_location
     current_user.update(latitude: params[:latitude].to_f, longitude: params[:longitude].to_f)
