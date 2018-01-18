@@ -1,4 +1,6 @@
-
 $( document ).on('turbolinks:load', function() {
-    $('#datepicker').datepicker();
+    $('.datepicker').datepicker({
+        todayHighlight: true,
+        format: "dd-mm-yyyy"
+    });
 })
