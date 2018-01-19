@@ -3,7 +3,6 @@
 Rails.application.routes.draw do
   get 'home' => 'pages#home'
   get 'dashboard' => 'pages#dashboard'
-  get 'find_nearby' => 'find_nearby#index'
 
   post 'requests/user_position'
 
