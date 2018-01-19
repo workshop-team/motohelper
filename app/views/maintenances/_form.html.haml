@@ -4,5 +4,11 @@
   = f.input :warranty_date, as: :string, input_html: { class: 'datepicker', value: (l(f.object.warranty_date) if f.object.warranty_date.present?) }
   = f.input :note, as: :text
   = f.association :car, collection: current_user.cars.decorate, label_method: :name, prompt: t('choose_option')
+  - if @maintenance.invoice?
+    = image_tag @maintenance.invoice.thumb.url
+    %div
+      = label_tag :remove_invoice do
+        Remove invoice
+        \#{f.check_box :remove_invoice}
   = f.file_field :invoice
   = f.button :submit
