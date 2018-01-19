@@ -11,4 +11,8 @@ module ApplicationHelper
       'alert-info'
     end
   end
+
+  def l_date(date)
+    l date if date.present?
+  end
 end
