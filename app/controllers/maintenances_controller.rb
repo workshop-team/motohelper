@@ -39,7 +39,7 @@ class MaintenancesController < ApplicationController
   private
 
   def maintenance_params
-    params.require(:maintenance).permit(%i[name mileage warranty_date note car_id])
+    params.require(:maintenance).permit(%i[name mileage warranty_date note car_id invoice])
   end
 
   def find_maintenance
