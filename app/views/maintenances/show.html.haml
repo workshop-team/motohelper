@@ -8,7 +8,7 @@
   
 %p
   %strong= Maintenance.human_attribute_name(:warranty_date)
-  = l @maintenance.warranty_date
+  = l_date(@maintenance.warranty_date)
 %p
   %strong= Maintenance.human_attribute_name(:mileage)
   = @maintenance.decorate.mileage
