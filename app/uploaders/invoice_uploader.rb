@@ -27,15 +27,11 @@ class InvoiceUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  process resize_to_fit: [800, 800]
+  process resize_to_fit: [1800, 1800]
 
   # Create different versions of your uploaded files:
-  version :thumb do
-    process resize_to_fit: [35, 35]
-  end
-
   version :norm do
-    process resize_to_fit: [128, 128]
+    process resize_to_fit: [300, 300]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

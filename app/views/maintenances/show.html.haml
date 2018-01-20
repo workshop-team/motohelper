@@ -18,7 +18,7 @@
   = @maintenance.note
 
 %p
-  = image_tag(@maintenance.invoice.url, alt: 'Invoice') if @maintenance.invoice?
+  = (link_to image_tag(@maintenance.invoice.norm.url, alt: 'Invoice', class: 'img-thumbnail'), @maintenance.invoice.url ) if @maintenance.invoice?
 
 
 = link_to t('destroy'), @maintenance, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-danger'

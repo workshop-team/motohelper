@@ -5,10 +5,9 @@
   = f.input :note, as: :text
   = f.association :car, collection: current_user.cars.decorate, label_method: :name, prompt: t('choose_option')
   - if @maintenance.invoice?
-    = image_tag @maintenance.invoice.thumb.url
-    %div
-      = label_tag :remove_invoice do
-        Remove invoice
-        \#{f.check_box :remove_invoice}
-  = f.file_field :invoice
+    %div.form-group
+      = image_tag @maintenance.invoice.norm.url
+      %label.form-check-label
+      = f.input :remove_invoice, as: :boolean
+  = f.input :invoice, as: :file, label: false
   = f.button :submit
