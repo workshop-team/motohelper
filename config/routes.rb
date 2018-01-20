@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  root 'pages#home'
+
   get 'home' => 'pages#home'
   get 'dashboard' => 'pages#dashboard'
 
@@ -18,6 +20,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
+    root 'regular_users#index'
+
     resources :regular_users
     resources :admin_users
     resources :cars
@@ -25,9 +29,9 @@ Rails.application.routes.draw do
     resources :maintenances
     resources :workshops
     resources :mileages
-
-    root 'regular_users#index'
   end
 
-  root 'pages#home'
+  authenticate :user do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end
