@@ -10,7 +10,6 @@ pl:
   destroy: 'Usuń'
   edit: 'Edycja'
   see: 'Zobacz'
-  remove_invoice: 'Usuń fakturę'
 
   pages:
     dashboard:
