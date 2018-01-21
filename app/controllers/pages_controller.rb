@@ -9,13 +9,13 @@ class PagesController < ApplicationController
       maintenances: current_user.maintenances.most_recent(5),
       mileages: current_user.mileages.most_recent(5).decorate,
       reminders: current_user.reminders.most_recent(5),
-      closest_service: find_nearby
+      closest_service: closest_service
     }
   end
 
   private
 
-  def find_nearby
-    FindNearby.new.find_places(current_user.latitude, current_user.longitude)
+  def closest_service
+    FindNearby.new(current_user).places_session
   end
 end
