@@ -16,6 +16,6 @@ class PagesController < ApplicationController
   private
 
   def closest_service
-    FindNearby.new.places_session(current_user.id, current_user.latitude, current_user.longitude, current_user.language)
+    FindNearby.new(current_user).places_session
   end
 end
