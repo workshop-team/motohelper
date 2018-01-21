@@ -42,6 +42,7 @@ pl:
         gas_station: 'Stacje paliw'
         parking: 'Parkingi'
         not_found: 'Nie odnaleziono żadnego punktu w najbliższej okolicy'
+        last_known_position: Ostatna znana pozycja
 
   activerecord:
     models:

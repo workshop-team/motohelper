@@ -5,19 +5,25 @@ module GoogleApi
   FIND_OBJECT_NEARBY_RADIUS = 1000
   CAR_REPAIR_TYPE = 'car_repair'
   CAR_DEALER_TYPE = 'car_dealer'
-  API_MAPS_URL = 'https://maps.googleapis.com/maps/api/place'
+  PLACES_API_URL = 'https://maps.googleapis.com/maps/api/place'
+  GEOCODE_API_URL = 'https://maps.googleapis.com/maps/api/geocode'
 
   def get_workshops_with_details(latitude, longitude)
     objects_to_array(latitude, longitude, CAR_REPAIR_TYPE) + objects_to_array(latitude, longitude, CAR_DEALER_TYPE)
   end
 
   def find_objects_nearby(latitude, longitude, type)
-    response = HTTParty.get("#{API_MAPS_URL}/nearbysearch/json?#{object_nearby_params(latitude, longitude, type)}")
+    response = HTTParty.get("#{PLACES_API_URL}/nearbysearch/json?#{object_nearby_params(latitude, longitude, type)}")
     JSON.parse(response.body)
   end
 
   def get_place_details(place_id)
-    response = HTTParty.get("#{API_MAPS_URL}/details/json?#{place_details_params(place_id)}")
+    response = HTTParty.get("#{PLACES_API_URL}/details/json?#{place_details_params(place_id)}")
+    JSON.parse(response.body)
+  end
+
+  def get_address(latitude, longitude, language)
+    response = HTTParty.get("#{GEOCODE_API_URL}/json?#{get_address_params(latitude, longitude, language)}")
     JSON.parse(response.body)
   end
 
@@ -29,6 +35,10 @@ module GoogleApi
 
   def place_details_params(place_id)
     "placeid=#{place_id}&key=#{secrets}"
+  end
+
+  def get_address_params(latitude, longitude, language)
+    "latlng=#{latitude},#{longitude}&language=#{language}&key=#{secrets}"
   end
 
   def objects_to_array(latitude, longitude, type)
@@ -43,6 +53,6 @@ module GoogleApi
     ENV['GOOGLE_API_KEY']
   end
 
-  module_function :get_workshops_with_details, :find_objects_nearby, :get_place_details,
-                  :object_nearby_params, :place_details_params, :objects_to_array, :secrets
+  module_function :get_workshops_with_details, :find_objects_nearby, :get_place_details, :get_address,
+                  :object_nearby_params, :place_details_params, :objects_to_array, :get_address_params, :secrets
 end
