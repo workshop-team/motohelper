@@ -14,7 +14,21 @@ class FindNearby
     GoogleApi.get_address(latitude, longitude, language)['results'].first['formatted_address']
   end
 
+  def places_session(user_id, latitude, longitude, language)
+    cache_key = "#{user_id}:#{latitude}:#{longitude}"
+    if can_be_cached?(cache_key, latitude, longitude)
+      Rails.cache.write cache_key, {
+        places: find_places(latitude, longitude), address: last_position_address(latitude, longitude, language)
+      }, expires_in: 7.days
+    end
+    Rails.cache.read(cache_key)
+  end
+
   private
+
+  def can_be_cached?(cache_key, latitude, longitude)
+    Rails.cache.read(cache_key).nil? && latitude.present? && longitude.present?
+  end
 
   def reduced_place(latitude, longitude, type)
     api_places = GoogleApi.find_objects_nearby(latitude, longitude, type)['results']
