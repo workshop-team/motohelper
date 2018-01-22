@@ -1,4 +1,19 @@
+.text-right
+  =  link_to new_car_path, class: 'btn btn-success btn-sm text-white' do
+    = content_tag(:i, nil, class: 'fa fa-plus')
+    = t('add')
+
 %p.card-text
-  %ul.list-group
-    - data[:cars].each do |car|
-      %li.list-group-item.bg-secondary #{car.name}
+  %table.table
+    %thead
+      %tr
+        %th{scope: 'col'}= Car.model_name.human
+        %th
+    %tbody
+      - data[:cars].each do |car|    
+        %tr
+          %td= car.name
+          %td
+            = link_to edit_car_path(car), class: 'btn btn-secondary btn-sm text-white' do
+              = content_tag(:i, nil, class: 'fa fa-pencil')
+              = t('edit')
