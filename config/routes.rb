@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'pages#home'
-
   get 'home' => 'pages#home'
   get 'dashboard' => 'pages#dashboard'
 
@@ -18,6 +16,12 @@ Rails.application.routes.draw do
   resources :dashboard, only: :index
 
   devise_for :users
+
+  authenticated :user do
+    root 'pages#dashboard', as: :authenticated_root
+  end
+
+  root 'pages#home'
 
   namespace :admin do
     root 'regular_users#index'
