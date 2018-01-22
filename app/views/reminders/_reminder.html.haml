@@ -1,0 +1,7 @@
+%tr
+  %td= link_to reminder.name, reminder
+  %td= reminder.car.decorate.name
+  %td= reminder.mileage
+  %td= reminder.reminder_date
+  %td= link_to t('edit'), edit_reminder_path(reminder)
+  %td= link_to t('destroy'), reminder, method: :delete, data: { confirm: t('are_you_sure') }

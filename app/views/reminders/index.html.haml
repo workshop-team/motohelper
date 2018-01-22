@@ -1,4 +1,15 @@
+=link_to t('add_new'), new_reminder_path(@reminder), class: 'btn btn-primary'
+
 .autopagerize_page_element
-  - @reminders.each do |reminder|
-    %p= link_to reminder.name, reminder
+  %table.table.table-hover
+    %thead
+      %tr
+        %th{scope: 'col'}= Reminder.model_name.human
+        %th{scope: 'col'}= Car.model_name.human
+        %th{scope: 'col'}= Reminder.human_attribute_name(:mileage)
+        %th{scope: 'col'}= Reminder.human_attribute_name(:reminder_date)
+        %th{scope: 'col', colspan: '2'}
+
+      = render @reminders
+
 = paginate @reminders

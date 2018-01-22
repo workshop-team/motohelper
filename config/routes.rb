@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :maintenances, concerns: :paginatable
   resources :mileages, only: %i[show index], concerns: :paginatable
-  resources :reminders, only: %i[show index], concerns: :paginatable
+  resources :reminders, concerns: :paginatable
   resources :dashboard, only: :index
 
   devise_for :users

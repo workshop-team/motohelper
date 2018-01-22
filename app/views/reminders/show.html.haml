@@ -1,17 +1,22 @@
 %p
-  %strong Name:
+  %strong= Reminder.human_attribute_name(:name)
   = @reminder.name
+
 %p
-  %strong Reminder date:
-  = @reminder.reminder_date
+  %strong= Car.model_name.human
+  = @reminder.car.decorate.name
+
 %p
-  %strong Reminder note:
-  = @reminder.note
+  %strong= Reminder.human_attribute_name(:reminedr_date)
+  = l_date(@reminder.reminder_date)
 %p
-  %strong Mileage:
+  %strong= Reminder.human_attribute_name(:mileage)
   = @reminder.mileage
+
 %p
-  %strong Car:
-  = @reminder.car.brand
-  = @reminder.car.model
-  = @reminder.car.registration_number
+  %strong= Reminder.human_attribute_name(:note)
+  = @reminder.note
+
+= link_to t('destroy'), @reminder, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-danger'
+= link_to t('edit'), edit_reminder_path(@reminder), class: 'btn btn-success'
+= link_to t('back'), reminders_path, class: 'btn btn-secondary'
