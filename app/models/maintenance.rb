@@ -3,6 +3,8 @@
 class Maintenance < ApplicationRecord
   include MostRecentable
 
+  mount_uploader :invoice, InvoiceUploader
+
   acts_as_paranoid
 
   belongs_to :car
