@@ -24,6 +24,11 @@ class CarsController < ApplicationController
     end
   end
 
+  def destroy
+    message = @car.destroy ? 'message_of_deletion' : 'message_of_deletion_fail'
+    redirect_to dashboard_path, notice: I18n.t(message)
+  end
+
   private
 
   def car_params
