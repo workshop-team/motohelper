@@ -58,6 +58,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'haml_lint', require: false
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.6'
 end
