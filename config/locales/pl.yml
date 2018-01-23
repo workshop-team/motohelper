@@ -116,11 +116,16 @@ pl:
         maintenance:
           attributes:
             car:
-              required: 'Bez samochodzika ani rusz :)'
+              required: &no_car 'Bez samochodzika ani rusz :)'
         car:
           attributes:
             user:
               required: 'No jak tak bez użytkownika?'
+
+        mileage:
+          attributes:
+            car:
+              required: *no_car
 
   errors:
     rescue:

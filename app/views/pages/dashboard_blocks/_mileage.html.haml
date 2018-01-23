@@ -11,5 +11,5 @@
       - data[:mileages].each do |mileage|
         %tr
           %td= mileage.car.decorate.name
-          %td= mileage.meter_status
-          %td= mileage.date
+          %td= link_to mileage.meter_status, mileage
+          %td= l_date mileage.date

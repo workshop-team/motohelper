@@ -6,4 +6,8 @@
   = @mileage.meter_status
 %p
   %strong #{ Mileage.human_attribute_name :date }:
-  = @mileage.date
+  = l_date(@mileage.date)
+
+= link_to t('destroy'), @mileage, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-danger'
+= link_to t('edit'), edit_mileage_path(@mileage), class: 'btn btn-success'
+= link_to t('back'), mileages_path, class: 'btn btn-secondary'

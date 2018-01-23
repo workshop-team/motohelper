@@ -17,11 +17,10 @@ Rails.application.routes.draw do
   end
 
   resources :maintenances, concerns: :paginatable
-  resources :mileages, only: %i[show index], concerns: :paginatable
+  resources :mileages, concerns: :paginatable
   resources :reminders, concerns: :paginatable
   resources :dashboard, only: :index
   resources :cars, except: %i[show index]
-
 
   devise_for :users
 

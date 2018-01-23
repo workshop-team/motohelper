@@ -1,0 +1,6 @@
+%tr
+  %td= mileage.car.decorate.name
+  %td= link_to mileage.meter_status, mileage
+  %td= l_date mileage.date
+  %td= link_to t('edit'), edit_mileage_path(mileage)
+  %td= link_to t('destroy'), mileage, method: :delete, data: { confirm: t('are_you_sure') }
