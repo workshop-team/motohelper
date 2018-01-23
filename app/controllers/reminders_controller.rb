@@ -4,7 +4,7 @@ class RemindersController < ApplicationController
   before_action :find_reminder, only: %i[show edit update destroy]
 
   def index
-    @reminders = current_user.reminders.order(created_at: :desc).page params[:page]
+    @reminders = current_user.reminders.order('sended DESC NULLS LAST', reminder_date: :desc).page params[:page]
   end
 
   def new
