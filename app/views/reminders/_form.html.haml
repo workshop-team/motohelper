@@ -1,0 +1,8 @@
+= simple_form_for @reminder do |f|
+  = f.input :name, as: :string
+  = f.input :mileage, as: :integer
+  = f.input :reminder_date, as: :string, input_html: { class: 'datepicker', value: l_date(f.object.reminder_date) }
+  = f.input :note, as: :text
+  = f.association :car, collection: current_user.cars.decorate, label_method: :name, prompt: t('choose_option')
+  = f.button :submit
+  = link_to t('back'), reminders_path, class: 'btn btn-secondary'
