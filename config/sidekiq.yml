@@ -1,4 +1,4 @@
 :queues:
   - default
   - mailers
-:concurrency: 10
+:concurrency: 5

@@ -1,25 +1,33 @@
 %nav.navbar.navbar-expand-md.navbar-dark.bg-dark
-  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+  %button.navbar-toggler.navbar-toggler-right{ 'aria-controls' => 'navbar-supported-content',
+  'aria-expanded' => 'false',
+  'aria-label' => 'Toggle navigation',
+  'data-target' => '#navbar-supported-content',
+  'data-toggle' => 'collapse',
+  type: 'button' }
     %span.navbar-toggler-icon
-  %a.navbar-brand{:href => "/"} MOTOHELPER
-  #navbarSupportedContent.collapse.navbar-collapse
+  %a.navbar-brand{ href: '/' } MOTOHELPER
+  .collapse.navbar-collapse#navbar-supported-content
     %ul.navbar-nav.mr-auto
       %li.nav-item.active
-        %a.nav-link{:href => "/"} Home
+        %a.nav-link{ href: '/' } Home
       %li.nav-item
-        - if user_signed_in? and current_user.admin?
+        - if user_signed_in? && current_user.admin?
           = link_to 'Admin', admin_root_path, class: 'nav-link'
       %li.nav-item
-        = link_to 'Dashboard', dashboard_index_path, class: 'nav-link'
+        = link_to 'Dashboard', dashboard_path, class: 'nav-link'
       %li.nav-item
-        %a.nav-link{:href => "#"} FAQs
+        %a.nav-link{ href: '#' } FAQs
     %ul.navbar-nav.my-2.my-lg-0
       - if user_signed_in?
         .dropdown.show
-          %a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            =image_tag current_user.avatar.url(:thumb), :class => "header-avatar"
-            =current_user.name
-          .dropdown-menu.dropdown-menu-left{"aria-labelledby" => "dropdownMenuLink"}
+          %a.btn.btn-secondary.dropdown-toggle#dropdown-menu-link{ 'aria-expanded' => 'false',
+          'aria-haspopup' => 'true',
+          'data-toggle' => 'dropdown',
+          href: '#', role: 'button' }
+            = image_tag current_user.avatar.url(:thumb), class: 'header-avatar'
+            = current_user.name
+          .dropdown-menu.dropdown-menu-left{ 'aria-labelledby' => 'dropdown-menu-link' }
             = link_to('Edit profile', edit_user_registration_path, class: 'dropdown-item')
             = link_to('Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item')
       - else
