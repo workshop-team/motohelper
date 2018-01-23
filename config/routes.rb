@@ -22,7 +22,6 @@ Rails.application.routes.draw do
   resources :dashboard, only: :index
   resources :cars, except: %i[show index]
 
-
   devise_for :users
 
   namespace :admin do
