@@ -1,4 +1,4 @@
-%tr{ class: ('gray-cell' if reminder.sended.present?) }
+%tr{ class: ('table-secondary' if reminder.sended.present?) }
   %td= link_to reminder.name, reminder
   %td= reminder.car.decorate.name
   %td= reminder.mileage
