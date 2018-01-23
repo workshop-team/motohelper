@@ -7,21 +7,20 @@
   %table.table
     %thead
       %tr
-        %th{scope: 'col'}= Car.model_name.human
+        %th{ scope: 'col' }= Car.model_name.human
         %th
         %th
     %tbody
-      - data[:cars].each do |car|    
+      - data[:cars].each do |car|
         %tr
           %td= car.name
           %td
-            = link_to car, |
-            method: :delete, |
-            data: { confirm: t('are_you_sure') }, |
+            = link_to car,
+            method: :delete,
+            data: { confirm: t('are_you_sure') },
             class: 'btn btn-secondary btn-sm text-white' do
               = content_tag(:i, nil, class: 'fa fa-times')
               = t('destroy')
-
           %td
             = link_to edit_car_path(car), class: 'btn btn-secondary btn-sm text-white' do
               = content_tag(:i, nil, class: 'fa fa-pencil')
