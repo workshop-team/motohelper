@@ -1,15 +1,15 @@
+= link_to t('add_new'), new_mileage_path(@mileage), class: 'btn btn-primary'
+
 .autopagerize_page_element
   %table.table.table-hover
     %thead
       %tr
-        %th{scope: 'col'}= Car.model_name.human
-        %th{scope: 'col'}= Mileage.human_attribute_name :meter_status
-        %th{scope: 'col'}= Mileage.human_attribute_name :date
+        %th{ scope: 'col' }= Car.model_name.human
+        %th{ scope: 'col' }= Mileage.human_attribute_name :meter_status
+        %th{ scope: 'col' }= Mileage.human_attribute_name :date
+        %th{ scope: 'col', colspan: '2' }
+
     %tbody
-      - @mileages.each do |mileage|
-        %tr
-          %td= mileage.car.decorate.name
-          %td= link_to mileage.meter_status, mileage
-          %td= mileage.date
+      = render @mileages
 
 = paginate @mileages

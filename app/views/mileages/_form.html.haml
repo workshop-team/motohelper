@@ -1,0 +1,8 @@
+= simple_form_for @mileage do |f|
+  = f.input :meter_status, as: :integer
+  = f.association :car,
+    collection: current_user.cars.decorate,
+    label_method: :name, prompt: t('choose_option')
+
+  = f.input :date, as: :string, input_html: { class: 'datepicker', value: l_date(f.object.date) }
+  = f.submit
