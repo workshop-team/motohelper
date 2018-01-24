@@ -26,6 +26,12 @@
     %br/
     = f.text_field :name
     %br/
+  .field
+    = f.label :language
+    %br/
+    = f.select :language, User.languages.map{|k, _v| [k, k]}
+    %br/
+          
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     %div
       Currently waiting confirmation for: #{resource.unconfirmed_email}

@@ -10,6 +10,12 @@
     %br/
     = f.text_field :name
   .field
+    = f.label :language
+    %br/
+    = f.select :language, User.languages.map{|k, _v| [k, k]}
+    %br/
+      
+  .field
     = f.label :password
     - if @minimum_password_length
       %em
