@@ -53,6 +53,9 @@ gem 'paranoia', '~> 2.2'
 gem 'sidekiq'
 gem 'whenever', require: false
 
+# Error reporting
+gem 'rollbar'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'dotenv-rails'
