@@ -4,5 +4,8 @@
   Reminder: #{@reminder.name}
   %br/
 %p
-  To login to the site, just follow this link: #{ reminder_url(@reminder) }.
+  Reminder TYPE: #{@type}
+  %br/
+%p
+  To see your reminder, just follow this link: #{reminder_url(@reminder)}.
 %p Thanks for joining and have a great day!
