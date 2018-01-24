@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class EncryptService
-  @encryptor = ActiveSupport::MessageEncryptor.new(ENV['ENCRYPT_KEY'])
+  @encryptor = ActiveSupport::MessageEncryptor.new([ENV['MESSAGE_ENCRYPTOR_SALT']].pack('H*'))
 
   def self.encrypt_data(value)
     @encryptor.encrypt_and_sign(value)
