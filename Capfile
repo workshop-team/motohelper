@@ -13,6 +13,7 @@ require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
 require 'capistrano/sidekiq'
 require 'whenever/capistrano'
+require 'rollbar/capistrano3'
 
 require 'capistrano/scm/git'
 install_plugin Capistrano::SCM::Git

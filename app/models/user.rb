@@ -32,4 +32,8 @@ class User < ApplicationRecord
     longitude_new = EncryptService.encrypt_data(longitude_new) if longitude_new.present?
     write_attribute(:longitude, longitude_new)
   end
+
+  def send_devise_notification(notification, *args)
+    devise_mailer.send(notification, self, *args).deliver_later
+  end
 end

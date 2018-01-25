@@ -10,6 +10,7 @@ set :deploy_to, '/var/www/motohelper'
 append(
   :linked_files
 )
+
 # Default value for linked_dirs is []
 append(
   :linked_dirs,
@@ -19,6 +20,10 @@ append(
   'tmp/sockets',
   'public/uploads'
 )
+
+set :rollbar_token, ENV['ROLLBAR_DEPLOY_ACCESS_TOKEN']
+set :rollbar_env, (proc { fetch :stage })
+set :rollbar_role, (proc { :app })
 
 set :keep_releases, 5
 set :whenever_identifier, -> { "#{fetch(:application)}_#{fetch(:stage)}" }
