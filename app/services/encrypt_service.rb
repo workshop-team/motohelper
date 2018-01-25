@@ -5,10 +5,10 @@ class EncryptService
   @encryptor = ActiveSupport::MessageEncryptor.new(key)
 
   def self.encrypt_data(value)
-    @encryptor.encrypt_and_sign(value)
+    @encryptor.encrypt_and_sign(value) if value.present?
   end
 
   def self.decrypt_data(value)
-    @encryptor.decrypt_and_verify(value)
+    @encryptor.decrypt_and_verify(value) if value.present?
   end
 end
