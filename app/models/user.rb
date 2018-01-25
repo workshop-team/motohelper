@@ -23,6 +23,16 @@ class User < ApplicationRecord
     type == 'AdminUser'
   end
 
+  def latitude=(latitude_new)
+    latitude_new = EncryptService.encrypt_data(latitude_new) if latitude_new.present?
+    write_attribute(:latitude, latitude_new)
+  end
+
+  def longitude=(longitude_new)
+    longitude_new = EncryptService.encrypt_data(longitude_new) if longitude_new.present?
+    write_attribute(:longitude, longitude_new)
+  end
+
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
   end

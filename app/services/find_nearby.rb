@@ -2,8 +2,8 @@
 
 class FindNearby
   def initialize(current_user)
-    @latitude = current_user.latitude
-    @longitude = current_user.longitude
+    @latitude = EncryptService.decrypt_data(current_user.latitude)
+    @longitude = EncryptService.decrypt_data(current_user.longitude)
     @language = current_user.language
     @use_id = current_user.id
   end

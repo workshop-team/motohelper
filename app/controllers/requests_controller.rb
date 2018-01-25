@@ -19,6 +19,6 @@ class RequestsController < ApplicationController
   private
 
   def save_user_location
-    current_user.update(latitude: params[:latitude].to_f, longitude: params[:longitude].to_f)
+    current_user.update(latitude: params[:latitude], longitude: params[:longitude])
   end
 end
