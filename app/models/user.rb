@@ -22,4 +22,8 @@ class User < ApplicationRecord
   def admin?
     type == 'AdminUser'
   end
+
+  def latitude=(*)
+    write_attribute(:latitude, EncryptService.encrypt_data(latitude))
+  end
 end

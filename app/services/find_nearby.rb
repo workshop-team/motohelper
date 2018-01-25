@@ -2,7 +2,7 @@
 
 class FindNearby
   def initialize(current_user)
-    @latitude = current_user.latitude
+    @latitude = EncryptService.decrypt_data(current_user.latitude).to_f
     @longitude = current_user.longitude
     @language = current_user.language
     @use_id = current_user.id
@@ -23,7 +23,6 @@ class FindNearby
 
   def places_session
     return unless @latitude.present? && @longitude.present?
-
     if can_be_cached?(cache_key)
       Rails.cache.write cache_key, {
         places: find_places, address: last_position_address
