@@ -3,7 +3,7 @@
 pl:
   devise:
     confirmations:
-      confirmed: "Twoje konto zostało aktywowane. Zostałeś pomyślnie zalogowany."
+      confirmed: "Twoje konto zostało aktywowane. Możesz się teraz zalogować."
       send_instructions: "Za chwilę otrzymasz email z instrukcją jak aktywować konto."
       send_paranoid_instructions: "Jeśli Twój adres email istnieje w naszej bazie, za chwilę powinieneś otrzymać instrukcję jak aktywować konto."
     failure:
@@ -19,10 +19,30 @@ pl:
     mailer:
       confirmation_instructions:
         subject: "Instrukcja aktywacji konta"
+        welcome: "Cześć"
+        confirmation_instruction: "Aby aktywować konto - potwierdź rejestrację klikająć w link:"
+        confirm: "potwierdzam rejestrację"
       reset_password_instructions:
-        subject: "Instrukcja zresetowania hasła."
+        subject: "Zresetuj hasło w Motohelper"
+        you_can_this_through_link: "Dostaliśmy prośbę o zmianę Twojego hasła Motohelper. Możesz to zrobić klikając w link poniżej."
+        change_my_password: "Zmień moje hasło"
+        ignore_this_mail: "Jeśli to nie Ty próbowałeś zmienić hasło - zignoruj tę wiadomość."
+        password_wont_change: "Twoje hasło nie zostanie zmienione do czasu aż nie klikniesz w powyższy link i nie utworzysz nowego hasła."
+      password_change:
+        subject: "Zmiana hasła w Motohelper"
+        welcome: "Cześć"
+        password_change: "Twoje hasło zostało zmienione."
       unlock_instructions:
         subject: "Instrukcja odblokowania konta"
+        welcome: "Cześć"
+        account_locked: "Twoje konto zostało zablokowane z powodu przekroczenia ilości możliwych prób logowania."
+        click_to_unlock: "Kliknij link poniżej aby odblokować swoje konto:"
+        unlock_instruction: "Odblokuj moje konto"
+      email_changed:
+        subject: "Zmiana adresu mailowego w Motohelper"
+        welcome: "Cześć"
+        email_changed: "Dostajesz tą wiadomość, ponieważ dostaliśmy prośbę o zmianę Twojego adresu mailowego na adres:"
+        email_changed: "Dostajesz tą wiadomość, ponieważ Twój email został zmieniony na adres:"
     omniauth_callbacks:
       failure: "Logowanie przez konto %{kind} zakończyło się błędem: \"%{reason}\"."
       success: "Zalogowałeś się pomyślnie przez konto %{kind}."
