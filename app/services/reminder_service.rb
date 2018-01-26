@@ -26,6 +26,6 @@ class ReminderService
 
   def send_email(reminder, type)
     reminder.update(sended: Date.today)
-    ReminderMailer.reminder_email(reminder, type).deliver_now
+    ReminderMailer.reminder_email(reminder, type.to_s).deliver_later
   end
 end
