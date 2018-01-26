@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'home' => 'pages#home'
   get 'dashboard' => 'pages#dashboard'
+  get 'contact' => 'contacts#new'
+  post 'contact' => 'contacts#create'
 
   post 'requests/user_position'
 
