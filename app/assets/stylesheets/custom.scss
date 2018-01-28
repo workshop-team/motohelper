@@ -66,3 +66,15 @@ a.navbar-brand{
   font-size: 14px;
   color: #999999;
 }
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.devise-form {
+  margin-bottom: 1rem;
+}
+input.devise-form{
+  padding: .75rem .75rem;
+}

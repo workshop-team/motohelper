@@ -82,7 +82,9 @@ pl:
         name: 'Nazwa'
         email: 'E-mail'
         password: 'Hasło'
+        password_confirmation: 'Powtórz hasło'
         language: 'Język'
+        remember_me: "Zapamiętaj mnie"
 
       car:
         brand: 'Marka'
