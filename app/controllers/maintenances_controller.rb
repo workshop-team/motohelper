@@ -43,7 +43,7 @@ class MaintenancesController < ApplicationController
   end
 
   def find_maintenance
-    @maintenance = current_user.maintenances.find(params[:id])
+    @maintenance = current_user.maintenances.friendly.find(params[:id])
   end
 
   def message(maintenance)
