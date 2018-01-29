@@ -36,6 +36,6 @@ class CarsController < ApplicationController
   end
 
   def find_car
-    @car = Car.find(params[:id])
+    @car = Car.friendly.find(params[:id])
   end
 end
