@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125213804) do
+ActiveRecord::Schema.define(version: 20180129114626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,9 @@ ActiveRecord::Schema.define(version: 20180125213804) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
+    t.string "slug"
     t.index ["deleted_at"], name: "index_cars_on_deleted_at"
+    t.index ["slug"], name: "index_cars_on_slug", unique: true
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
@@ -37,8 +39,10 @@ ActiveRecord::Schema.define(version: 20180125213804) do
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
     t.string "invoice"
+    t.string "slug"
     t.index ["car_id"], name: "index_maintenances_on_car_id"
     t.index ["deleted_at"], name: "index_maintenances_on_deleted_at"
+    t.index ["slug"], name: "index_maintenances_on_slug", unique: true
   end
 
   create_table "mileages", force: :cascade do |t|
@@ -62,8 +66,10 @@ ActiveRecord::Schema.define(version: 20180125213804) do
     t.datetime "deleted_at"
     t.date "sended"
     t.date "archived"
+    t.string "slug"
     t.index ["car_id"], name: "index_reminders_on_car_id"
     t.index ["deleted_at"], name: "index_reminders_on_deleted_at"
+    t.index ["slug"], name: "index_reminders_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|
