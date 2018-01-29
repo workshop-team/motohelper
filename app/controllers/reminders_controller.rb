@@ -1,10 +1,17 @@
 # frozen_string_literal: true
 
 class RemindersController < ApplicationController
-  before_action :find_reminder, only: %i[show edit update destroy]
+  before_action :find_reminder, only: %i[show edit update destroy archive restore_archived]
 
   def index
-    @reminders = current_user.reminders.order('sended DESC NULLS LAST', reminder_date: :desc).page params[:page]
+    @reminders = current_user.reminders.not_archived.order_table.page params[:page]
+    @archive = false
+  end
+
+  def archived
+    @reminders = current_user.reminders.archived.order_table.page params[:page]
+    @archive = true
+    render :index
   end
 
   def new
@@ -32,6 +39,22 @@ class RemindersController < ApplicationController
   def destroy
     @reminder.destroy
     redirect_to reminders_path, notice: I18n.t('message_of_deletion')
+  end
+
+  def archive
+    if @reminder.update(archived: Date.today)
+      redirect_to reminders_path, notice: I18n.t('message_about_archiving')
+    else
+      flash[:danger] = I18n.t('message_about_archiving_fail')
+    end
+  end
+
+  def restore_archived
+    if @reminder.update(archived: nil)
+      redirect_to reminders_path, notice: I18n.t('message_about_restoring')
+    else
+      flash[:danger] = I18n.t('message_about_restoring_fail')
+    end
   end
 
   private

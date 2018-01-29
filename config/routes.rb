@@ -20,8 +20,16 @@ Rails.application.routes.draw do
 
   resources :maintenances, concerns: :paginatable
   resources :mileages, concerns: :paginatable
-  resources :reminders, concerns: :paginatable
   resources :cars, except: %i[show index]
+
+  resources :reminders, concerns: :paginatable do
+    member do
+      get 'archive'
+      get 'restore_archived'
+    end
+
+    get 'archived', on: :collection
+  end
 
   devise_for :users
 
