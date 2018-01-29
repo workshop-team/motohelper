@@ -1,7 +1,11 @@
 %tr{ class: ('table-secondary' if reminder.sended.present?) }
   %td= link_to reminder.name, reminder
   %td= reminder.car.decorate.name
-  %td= reminder.mileage
-  %td= reminder.reminder_date
-  %td= link_to t('edit'), edit_reminder_path(reminder)
-  %td= link_to t('destroy'), reminder, method: :delete, data: { confirm: t('are_you_sure') }
+  %td= reminder.decorate.mileage
+  %td= l_date reminder.reminder_date
+  - if @archive
+    %td= link_to t('.restore'), restore_archived_reminder_path(reminder)
+  - else
+    %td= link_to t('edit'), edit_reminder_path(reminder)
+    %td= link_to t('destroy'), reminder, method: :delete, data: { confirm: t('are_you_sure') }
+    %td= link_to t('.archive_now'), archive_reminder_path(reminder)

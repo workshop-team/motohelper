@@ -1,14 +1,16 @@
-=link_to t('add_new'), new_reminder_path(@reminder), class: 'btn btn-primary'
+= link_to t('add_new'), new_reminder_path(@reminder), class: 'btn btn-success'
+= link_to t('.current'), reminders_path, class: 'btn btn-secondary'
+= link_to t('.archive'), archived_reminders_path, class: 'btn btn-secondary'
 
 .autopagerize_page_element
   %table.table.table-hover
     %thead
       %tr
-        %th{scope: 'col'}= Reminder.model_name.human
-        %th{scope: 'col'}= Car.model_name.human
-        %th{scope: 'col'}= Reminder.human_attribute_name(:mileage)
-        %th{scope: 'col'}= Reminder.human_attribute_name(:reminder_date)
-        %th{scope: 'col', colspan: '2'}
+        %th{ scope: 'col' }= Reminder.model_name.human
+        %th{ scope: 'col' }= Car.model_name.human
+        %th{ scope: 'col' }= Reminder.human_attribute_name(:mileage)
+        %th{ scope: 'col' }= Reminder.human_attribute_name(:reminder_date)
+        %th{ scope: 'col', colspan: (@archive ? 1 : 3) }
 
       = render @reminders
 

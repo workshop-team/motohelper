@@ -5,6 +5,10 @@ pl:
   message_of_modification: 'Record został pomyślnie zmodyfikowany'
   message_of_deletion: 'Rekord został pomyślnie usunięty'
   message_of_deletion_fail: 'Usunięcie rekordu się nie powiodło'
+  message_about_archiving: 'Wpis został zarchiwizowany'
+  message_about_archiving_fail: 'Awaria przy archwizacji!'
+  message_about_restoring: 'Wpis został przywrócony'
+  message_about_restoring_fail: 'Wpisu nie udało się przywrócić'
   choose_option: 'Wybierz z list'
   are_you_sure: 'Czy jesteś pewny?'
   add_new: 'Dodaj nowy wpis'
@@ -45,6 +49,15 @@ pl:
         parking: 'Parkingi'
         not_found: 'Nie odnaleziono żadnego punktu w najbliższej okolicy'
         last_known_position: Ostatna znana pozycja
+
+  reminders:
+    index:
+      archive: 'Archiwum'
+      current: 'Aktualne wpisy'
+
+    reminder:
+      archive_now: 'Archiwizuj'
+      restore: 'Przywróć'
 
   activerecord:
     models:
@@ -91,7 +104,7 @@ pl:
 
       reminder:
         name: 'Nazwa'
-        reminder_date: 'Data powiadomienia'
+        reminder_date: 'Data zdarzenia'
         mileage: 'Przebieg'
         note: 'Notatka'
 
@@ -125,10 +138,6 @@ pl:
           attributes:
             car:
               required: *no_car
-
-  errors:
-    rescue:
-      record_not_found: 'Wpis nie został znaleziony. Sprawdź poprawność URL lub skontaktuj się z administratorem.'
 
   # controller translation
   contacts:
