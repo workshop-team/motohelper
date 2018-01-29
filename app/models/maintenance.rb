@@ -2,6 +2,9 @@
 
 class Maintenance < ApplicationRecord
   include MostRecentable
+  extend FriendlyId
+
+  friendly_id :name, use: :slugged
 
   mount_uploader :invoice, InvoiceUploader
 
