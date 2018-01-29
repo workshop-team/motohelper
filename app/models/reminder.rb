@@ -2,6 +2,9 @@
 
 class Reminder < ApplicationRecord
   include MostRecentable
+  extend FriendlyId
+
+  friendly_id :name, use: :slugged
 
   acts_as_paranoid
 

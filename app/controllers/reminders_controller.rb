@@ -41,6 +41,6 @@ class RemindersController < ApplicationController
   end
 
   def find_reminder
-    @reminder = current_user.reminders.find(params[:id])
+    @reminder = current_user.reminders.friendly.find(params[:id])
   end
 end
