@@ -85,6 +85,8 @@ pl:
         password_confirmation: 'Powtórz hasło'
         language: 'Język'
         remember_me: "Zapamiętaj mnie"
+        set_default_avatar: "Ustaw standarodwy avatar"
+        load_new_avatar: "Załaduj nowy avatar"
 
       car:
         brand: 'Marka'
