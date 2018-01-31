@@ -39,6 +39,7 @@ gem 'simple_form'
 
 # Default locales
 gem 'rails-i18n', '~> 5.0.0'
+gem 'route_translator'
 
 # Engine
 gem 'administrate'

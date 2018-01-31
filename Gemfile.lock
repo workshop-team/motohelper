@@ -288,6 +288,9 @@ GEM
       railties (>= 4.2.0, < 5.3)
     rollbar (2.15.5)
       multi_json
+    route_translator (5.5.3)
+      actionpack (>= 5.0.0.1, < 5.2)
+      activesupport (>= 5.0.0.1, < 5.2)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -424,6 +427,7 @@ DEPENDENCIES
   rails-controller-testing
   rails-i18n (~> 5.0.0)
   rollbar
+  route_translator
   rspec-rails (~> 3.6)
   rubocop
   sass-rails (~> 5.0)
