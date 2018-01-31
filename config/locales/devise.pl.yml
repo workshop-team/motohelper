@@ -67,6 +67,10 @@ pl:
       sign_in: "Logowanie"
       no_confirmation_instruction: "Nie otrzymałem instrukcji potwierdzenia."
       no_unlock_instruction: "Brak instrukcji odblokowania."
+      leave_it_blank: "(pozostaw to pole puste jeśli nie chcesz zmieniać)"
+      we_need_current_password_to_confirm_changes: "(proszę wpisz swoje aktualne hasło aby potwierdzić zmiany)"
+      characters_minimum: "znaków minimum"
+      cancel_account: "Usuń konto"
     sessions:
       user:
         signed_in: "Zostałeś zalogowany."
