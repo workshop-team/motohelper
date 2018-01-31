@@ -9,12 +9,12 @@ RSpec.describe MaintenancesController, type: :controller do
     before { sign_in maintenance.car.user }
 
     it 'renders the index template' do
-      get :index
+      get :index, params: { locale: 'en' }
       expect(response).to render_template('index')
     end
 
     it 'renders the show template' do
-      get :show, params: { id: maintenance }
+      get :show, params: { id: maintenance, locale: 'en' }
       expect(response).to render_template('show')
     end
   end
