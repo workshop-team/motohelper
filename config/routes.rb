@@ -7,31 +7,31 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get 'home' => 'pages#home'
-  get 'dashboard' => 'pages#dashboard'
-  get 'contact' => 'contacts#new'
-  post 'contact' => 'contacts#create'
-
-  post 'requests/user_position'
-
   concern :paginatable do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
 
-  resources :maintenances, concerns: :paginatable
-  resources :mileages, concerns: :paginatable
-  resources :cars, except: %i[show index]
+  localized do
+    get 'home' => 'pages#home'
+    get 'dashboard' => 'pages#dashboard'
+    get 'contact' => 'contacts#new'
+    post 'contact' => 'contacts#create'
 
-  resources :reminders, concerns: :paginatable do
-    member do
-      get 'archive'
-      get 'restore_archived'
+    resources :maintenances, concerns: :paginatable
+    resources :mileages, concerns: :paginatable
+    resources :cars, except: %i[show index]
+
+    resources :reminders, concerns: :paginatable do
+      member do
+        get 'archive'
+        get 'restore_archived'
+      end
+
+      get 'archived', on: :collection
     end
-
-    get 'archived', on: :collection
   end
 
-  devise_for :users
+  post 'requests/user_position'
 
   namespace :admin do
     root 'regular_users#index'
@@ -43,6 +43,10 @@ Rails.application.routes.draw do
     resources :maintenances
     resources :workshops
     resources :mileages
+  end
+
+  localized do
+    devise_for :users
   end
 
   authenticate :user, ->(u) { u.admin? } do

@@ -1,0 +1,23 @@
+pl:
+  routes:
+    cars: samochody
+    maintenances: uslugi
+    mileages: stan-licznika
+
+    reminders: przypomnienia
+    archived: archiwum
+    archive: archiwizuj
+
+    users: uzytkownicy
+    sign_in: logowanie
+    sign_up: rejestracja
+    sign_out: wyloguj
+    password: haslo
+    confirmation: potwierdzenie
+    
+    dashboard: deska-rozdzielcza
+    contact: kontakt
+
+    new: nowy
+    edit: edycja
+  
