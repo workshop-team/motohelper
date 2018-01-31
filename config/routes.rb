@@ -45,7 +45,7 @@ Rails.application.routes.draw do
     resources :mileages
   end
 
-  authenticate :user do
+  authenticate :user, ->(u) { u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
   end
 end
