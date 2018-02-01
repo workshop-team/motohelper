@@ -1,7 +1,13 @@
 = devise_error_messages!
-= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post , class: 'form-signin'}) do |f|
+= form_for(resource, as: resource_name,
+url: confirmation_path(resource_name),
+html: { method: :post, class: 'form-signin' }) do |f|
   %h4= t('devise.confirmations.resent_configrmation_instruction')
-  = f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: 'form-control devise-form', placeholder: true
+  = f.email_field :email,
+   autofocus: true,
+   value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
+   class: 'form-control devise-form', placeholder: true
   .actions
-    = f.submit t('devise.confirmations.resent_configrmation_instruction'), class: 'btn btn-primary'
-  = render "devise/shared/links"
+    = f.submit t('devise.confirmations.resent_configrmation_instruction'),
+     class: 'btn btn-primary'
+  = render 'devise/shared/links'

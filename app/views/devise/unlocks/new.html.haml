@@ -1,10 +1,14 @@
 = devise_error_messages!
-= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post, class: 'form-signin'  }) do |f|
+= form_for(resource,
+as: resource_name,
+url: unlock_path(resource_name),
+html: { method: :post, class: 'form-signin' }) do |f|
   %h4= t('devise.unlocks.resend_instruction')
   .field
     = f.label :email
     %br/
     = f.email_field :email, autofocus: true
   .actions
-    = f.submit t('devise.unlocks.resend_instruction'), class: 'btn btn-primary'
-= render "devise/shared/links"
+    = f.submit t('devise.unlocks.resend_instruction'),
+    class: 'btn btn-primary'
+= render 'devise/shared/links'

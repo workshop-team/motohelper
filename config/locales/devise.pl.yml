@@ -54,6 +54,7 @@ pl:
       updated: "Twoje hasło zostało zmienione. Zostałeś pomyślnie zalogowany."
       updated_not_active: "Twoje hasło zostało zmienione."
       reset_password_instruction: "Wyślij instrukcję resetowania hasła"
+      change_password: "Zmień hasło"
 
     registrations:
       destroyed: "Do widzenia! Twoje konto zostało usunięte."
