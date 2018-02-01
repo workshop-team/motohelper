@@ -17,6 +17,7 @@ pl:
   edit: 'Edycja'
   see: 'Zobacz'
   back: 'Wróć'
+  update: 'Aktualizuj'
 
   pages:
     dashboard:
@@ -48,7 +49,7 @@ pl:
         gas_station: 'Stacje paliw'
         parking: 'Parkingi'
         not_found: 'Nie odnaleziono żadnego punktu w najbliższej okolicy'
-        last_known_position: Ostatna znana pozycja
+        last_known_position: 'Ostatna znana pozycja'
 
   reminders:
     index:
@@ -95,7 +96,12 @@ pl:
         name: 'Nazwa'
         email: 'E-mail'
         password: 'Hasło'
+        password_confirmation: 'Powtórz hasło'
         language: 'Język'
+        remember_me: "Zapamiętaj mnie"
+        set_default_avatar: "Ustaw standarodwy avatar"
+        load_new_avatar: "Załaduj nowy avatar"
+        current_password: "Aktualne hasło"
 
       car:
         brand: 'Marka'

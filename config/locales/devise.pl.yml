@@ -6,6 +6,7 @@ pl:
       confirmed: "Twoje konto zostało aktywowane. Możesz się teraz zalogować."
       send_instructions: "Za chwilę otrzymasz email z instrukcją jak aktywować konto."
       send_paranoid_instructions: "Jeśli Twój adres email istnieje w naszej bazie, za chwilę powinieneś otrzymać instrukcję jak aktywować konto."
+      resent_configrmation_instruction: "Wyślij ponownie instrukcję aktywacji"
     failure:
       already_authenticated: "Jesteś aktualnie zalogowany."
       inactive: "Twoje konto nie zostało jeszcze aktywowane."
@@ -52,6 +53,9 @@ pl:
       send_paranoid_instructions: "Jeżeli Twój adres istnieje w naszej bazie, otrzymasz za chwilę emaila z instrukcją zmiany hasła."
       updated: "Twoje hasło zostało zmienione. Zostałeś pomyślnie zalogowany."
       updated_not_active: "Twoje hasło zostało zmienione."
+      reset_password_instruction: "Wyślij instrukcję resetowania hasła"
+      change_password: "Zmień hasło"
+
     registrations:
       destroyed: "Do widzenia! Twoje konto zostało usunięte."
       signed_up: "Witaj! Zarejestrowałeś się pomyślnie."
@@ -60,14 +64,24 @@ pl:
       signed_up_but_unconfirmed: "Wiadomość email z instrukcją aktywacji konta została przesłana na Twój adres email. Użj linku z emaila aby aktywować konto."
       update_needs_confirmation: "Konto zostało zaktualizowane. Niemniej jednak przed wprowadzeniem zmian musimy potwierdzić Twój nowy adres email. Za chwilę wyślemy instrukcję na nowy adres."
       updated: "Konto zostało pomyślnie zaktualizowane."
+      sign_up: "Rejestracja"
+      sign_in: "Logowanie"
+      no_confirmation_instruction: "Nie otrzymałem instrukcji potwierdzenia."
+      no_unlock_instruction: "Brak instrukcji odblokowania."
+      leave_it_blank: "(pozostaw to pole puste jeśli nie chcesz zmieniać)"
+      we_need_current_password_to_confirm_changes: "(proszę wpisz swoje aktualne hasło aby potwierdzić zmiany)"
+      characters_minimum: "znaków minimum"
+      cancel_account: "Usuń konto"
     sessions:
       user:
         signed_in: "Zostałeś zalogowany."
         signed_out: "Zostałeś wylogowany."
+        forgot_your_password: "Odzyskaj hasło."
     unlocks:
       send_instructions: "Za chwilę otrzymasz wiadomość email z instrukcją jak odblokować konto."
       send_paranoid_instructions: "Jeżeli Twoje konto istnieje, otrzymasz wiadomość emial z instrukcją jak odblokować konto."
       unlocked: "Twoje konto została pomyślnie odblokowane. Zaloguj się by kontynuować."
+      resend_instruction: "Wyślij ponownie instrukcję odblokowania."
   errors:
     messages:
       already_confirmed: "już został aktywowany, proszę spróbować się zalogować."
