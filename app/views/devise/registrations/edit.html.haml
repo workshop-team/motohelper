@@ -41,7 +41,7 @@ html: { method: :put }) do |f|
         class: 'form-control'
         - if @minimum_password_length
           %br/
-          @minimum_password_length.to_s
+          = @minimum_password_length.to_s
           %i= t('devise.registrations.characters_minimum')
       .form-group
         = f.password_field :password_confirmation,
