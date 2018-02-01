@@ -7,87 +7,68 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
-# Use Puma as the app server
-gem 'puma', '~> 3.7'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
-# Views
-gem 'bootstrap', '~> 4.0.0.beta3'
-gem 'draper'
+gem 'administrate', '~> 0.8.1'
+gem 'administrate-field-carrierwave', '~> 0.3'
+gem 'administrate-field-select', '~> 2.1', require: 'administrate/field/select_basic'
+gem 'bootstrap', '~> 4.0.0'
+gem 'carrierwave', '~> 1.2.2'
+gem 'carrierwave-i18n', '~> 0.2.0'
+gem 'coffee-rails', '~> 4.2.2'
+gem 'devise', '~> 4.4.1'
+gem 'draper', '~> 3.0.1'
 gem 'font-awesome-sass', '~> 4.7.0'
-gem 'haml-rails', '~> 1.0'
-gem 'jquery-rails'
-gem 'kaminari'
-gem 'mini_magick'
-gem 'simple_form'
-
-# Default locales
-gem 'rails-i18n', '~> 5.0.0'
-gem 'route_translator'
-
-# Engine
-gem 'administrate'
-gem 'administrate-field-carrierwave', '~> 0.2.0'
-gem 'administrate-field-select', '~> 2.0', require: 'administrate/field/select_basic'
-gem 'carrierwave', '~> 1.0'
-gem 'carrierwave-i18n'
-gem 'devise'
-gem 'friendly_id'
+gem 'friendly_id', '~> 5.2.3'
+gem 'haml-rails', '~> 1.0.0'
 gem 'httparty', '~> 0.15.6'
-gem 'paranoia', '~> 2.2'
-
-gem 'sidekiq'
-gem 'whenever', require: false
-
-# Error reporting
-gem 'rollbar'
+gem 'jbuilder', '~> 2.7.0'
+gem 'jquery-rails', '~> 4.3.1'
+gem 'kaminari', '~> 1.1.1'
+gem 'mini_magick', '~> 4.8.0'
+gem 'paranoia', '~> 2.4.0'
+gem 'pg', '~> 0.21'
+gem 'puma', '~> 3.11.2'
+gem 'rails-i18n', '~> 5.0.4'
+gem 'rollbar', '~> 2.15.5'
+gem 'route_translator', '~> 5.5.3'
+gem 'sass-rails', '~> 5.0'
+gem 'sidekiq', '~> 5.0.5'
+gem 'simple_form', '~> 3.5.0'
+gem 'turbolinks', '~> 5'
+gem 'uglifier', '>= 1.3.0'
+gem 'whenever', '~> 0.10.0', require: false
 
 group :development, :test do
-  gem 'awesome_print'
-  gem 'dotenv-rails'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'haml_lint', require: false
-  gem 'pry-byebug'
-  gem 'rspec-rails', '~> 3.6'
+  gem 'awesome_print', '~> 1.8.0'
+  gem 'dotenv-rails', '~> 2.2.1'
+  gem 'factory_bot_rails', '~> 4.8.2'
+  gem 'faker', '~> 1.8.7'
+  gem 'haml_lint', '~> 0.27.0', require: false
+  gem 'pry-byebug', '~> 3.5.1'
+  gem 'rspec-rails', '~> 3.7.2'
 end
 
 group :development do
-  gem 'capistrano'
-  gem 'capistrano-bundler'
-  gem 'capistrano-passenger'
-  gem 'capistrano-rails'
-  gem 'capistrano-rvm'
-  gem 'capistrano-scm-gitcopy'
-  gem 'capistrano-sidekiq'
+  gem 'capistrano', '~> 3.10.1'
+  gem 'capistrano-bundler', '~> 1.3.0'
+  gem 'capistrano-passenger', '~> 0.2'
+  gem 'capistrano-rails', '~> 1.3.1'
+  gem 'capistrano-rvm', '~> 0.1.2'
+  gem 'capistrano-scm-gitcopy', '~> 0.1.5'
+  gem 'capistrano-sidekiq', '~> 1.0.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'overcommit', '~> 0.41.0', require: false
-  gem 'rubocop', require: false
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rubocop', '~> 0.52.1', require: false
+  gem 'spring', '~> 2.0.2'
+  gem 'spring-watcher-listen', '~> 2.0.1'
   gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
-  gem 'database_cleaner'
-  gem 'rails-controller-testing'
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'database_cleaner', '~> 1.6.2'
+  gem 'rails-controller-testing', '~> 1.0.2'
+  gem 'shoulda-matchers', '~> 3.1.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
