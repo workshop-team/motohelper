@@ -1,5 +1,11 @@
 pl:
   pages:
+    home:
+      hello: 'Cześć, kierowco!'
+      create_service_book: 'Stwórz książkę serwisową dla twojego pojazdu.. Online!'
+      log_in_now: 'Zaloguj się do panelu:'
+      log_in: 'Logowanie'
+
     dashboard:
       closest_service: &closest_service 'Najbliższy serwis'
 
