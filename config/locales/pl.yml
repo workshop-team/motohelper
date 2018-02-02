@@ -18,6 +18,9 @@ pl:
   see: 'Zobacz'
   back: 'Wróć'
   update: 'Aktualizuj'
+  send: 'Wyślij'
+  got_idea: 'Masz pomysł albo sugestie?'
+  thanks_for_getting_in_touch: 'Dziękujemy za kontakt! Wypełnij proszę poniższy formularz'
 
   pages:
     dashboard:
