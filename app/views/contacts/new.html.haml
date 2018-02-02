@@ -1,5 +1,5 @@
-%h1= t('got_idea')
-%p= t('thanks_for_getting_in_touch')
+%h1= t('.got_idea')
+%p= t('.thanks_for_getting_in_touch')
 = simple_form_for @contact, url: contact_path do |f|
   = f.input :name, as: :string
   = f.input :email, as: :email
