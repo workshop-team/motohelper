@@ -22,7 +22,7 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new(reminder_params)
 
     if @reminder.save
-      redirect_to reminders_path, notice: I18n.t('message_of_addition')
+      redirect_to reminders_path, notice: t('message_of_addition')
     else
       render :new
     end
@@ -30,7 +30,7 @@ class RemindersController < ApplicationController
 
   def update
     if @reminder.update(reminder_params)
-      redirect_to reminders_path, notice: I18n.t('message_of_modification')
+      redirect_to reminders_path, notice: t('message_of_modification')
     else
       render :edit
     end
@@ -38,22 +38,22 @@ class RemindersController < ApplicationController
 
   def destroy
     @reminder.destroy
-    redirect_to reminders_path, notice: I18n.t('message_of_deletion')
+    redirect_to reminders_path, notice: t('message_of_deletion')
   end
 
   def archive
     if @reminder.update(archived: Date.today)
-      redirect_to reminders_path, notice: I18n.t('message_about_archiving')
+      redirect_to reminders_path, notice: t('.message_about_archiving')
     else
-      flash[:danger] = I18n.t('message_about_archiving_fail')
+      flash[:danger] = t('.message_about_archiving_fail')
     end
   end
 
   def restore_archived
     if @reminder.update(archived: nil)
-      redirect_to reminders_path, notice: I18n.t('message_about_restoring')
+      redirect_to reminders_path, notice: t('.message_about_restoring')
     else
-      flash[:danger] = I18n.t('message_about_restoring_fail')
+      flash[:danger] = t('.message_about_restoring_fail')
     end
   end
 

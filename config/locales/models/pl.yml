@@ -1,0 +1,85 @@
+pl:
+  activerecord:
+    models:
+      regular_user:
+        one: 'Użytkownik'
+        other: 'Użytkownicy'
+
+      admin_user:
+        one: 'Administrator'
+        other: 'Administratorzy'
+
+      car:
+        one: 'Samochód'
+        other: 'Samochody'
+
+      reminder:
+        one: 'Powiadomienie'
+        other: 'Powiadomienia'
+
+      maintenance:
+        one: 'Usługa serwisowa'
+        other: 'Usługi serwisowe'
+
+      workshop:
+        one: 'Warsztat'
+        other: 'Warsztaty'
+
+      mileage:
+        one: 'Przebieg'
+        other: 'Przebiegi'
+
+    attributes:
+      user:
+        avatar: 'Awatar'
+        name: 'Nazwa'
+        email: 'E-mail'
+        password: 'Hasło'
+        password_confirmation: 'Powtórz hasło'
+        language: 'Język'
+        remember_me: "Zapamiętaj mnie"
+        set_default_avatar: "Ustaw standarodwy avatar"
+        load_new_avatar: "Załaduj nowy avatar"
+        current_password: "Aktualne hasło"
+
+      car:
+        brand: 'Marka'
+        model: 'Model'
+        registration_number: 'Numer rejestracyjny'
+
+      reminder:
+        name: 'Nazwa'
+        reminder_date: 'Data zdarzenia'
+        mileage: 'Przebieg'
+        note: 'Notatka'
+
+      maintenance:
+        name: 'Nazwa'
+        mileage: 'Przebieg'
+        warranty_date: 'Data gwarancji'
+        note: 'Notatka'
+
+      workshop:
+        kind: 'Rodzaj'
+        latitude: 'szerokość geograficzna'
+        longitude: 'długość geograficzna'
+
+      mileage:
+        meter_status: 'Stan licznika'
+        date: 'Data'
+      
+    errors:
+      models:
+        maintenance:
+          attributes:
+            car:
+              required: &no_car 'Bez samochodzika ani rusz :)'
+        car:
+          attributes:
+            user:
+              required: 'No jak tak bez użytkownika?'
+
+        mileage:
+          attributes:
+            car:
+              required: *no_car
