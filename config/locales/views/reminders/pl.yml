@@ -1,0 +1,19 @@
+pl:
+  reminders:
+    index:
+      archive: 'Archiwum'
+      current: 'Aktualne wpisy'
+
+    reminder:
+      archive_now: 'Archiwizuj'
+      restore: 'Przywróć'
+    
+    archive:
+      message_about_archiving: 'Wpis został zarchiwizowany'
+      message_about_archiving_fail: 'Awaria przy archwizacji!'
+
+    restore_archived:
+      message_about_restoring: 'Wpis został przywrócony'
+      message_about_restoring_fail: 'Wpisu nie udało się przywrócić'
+
+

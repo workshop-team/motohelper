@@ -1,0 +1,8 @@
+pl:
+  contacts:
+    new:
+      got_idea: 'Masz pomysł albo sugestie?'
+      thanks_for_getting_in_touch: 'Dziękujemy za kontakt! Wypełnij proszę poniższy formularz'
+    create:
+      error_message: 'Wystąpiła jakaś mała katastrofa :('
+      success_message: 'Wiadomość wysłana, jest super!'

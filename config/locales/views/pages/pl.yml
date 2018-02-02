@@ -1,0 +1,32 @@
+pl:
+  pages:
+    dashboard:
+      closest_service: &closest_service 'Najbliższy serwis'
+
+    dashboard_blocks:
+      maintenance:
+        last_added: &last_added 'Ostatnio dodane'
+        all:  'Wszystkie usługi serwisowe'
+
+      reminders:
+        last_added: *last_added
+        all: 'Wszystkie przypomnienia'
+
+      mileage:
+        last_added: *last_added
+        all: 'Rejestr przebiegów'
+
+      closest_service_init:
+        set_location: 'Pobierz lokalizację'
+
+      closest_service:
+        closest_service: *closest_service
+        update_location: 'Aktualizuj lokalizacje'
+        car_dealer: 'Salony'
+        car_rental: 'Wypożyczalnie'
+        car_wash: 'Myjnie'
+        car_repair: 'Warsztaty'
+        gas_station: 'Stacje paliw'
+        parking: 'Parkingi'
+        not_found: 'Nie odnaleziono żadnego punktu w najbliższej okolicy'
+        last_known_position: 'Ostatna znana pozycja'
