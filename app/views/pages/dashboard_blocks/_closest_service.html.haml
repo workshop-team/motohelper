@@ -2,8 +2,8 @@
   %button.btn.btn-primary{ onclick: 'Dashboard.setLocation()' }
     = t('.update_location')
   %p #{t('.last_known_position')}: #{data[:closest_service][:address]}
-#positionInfo
-.carousel.slide#carouselExampleControls{ 'data-ride' => 'carousel',
+#position-info
+.carousel.slide#carousel-example-controls{ 'data-ride' => 'carousel',
 'data-interval' => '7000' }
   .carousel-inner
     - data[:closest_service][:places].keys.each_with_index do |type_of_place, index|
@@ -17,15 +17,15 @@
               - data[:closest_service][:places][type_of_place].first(2).each do |service|
                 %tr
                   %td
-                    = link_to service[:name].to_s,
+                    = link_to service[:name],
                     "https://www.google.com/maps/place/?q=place_id:#{service[:place_id]}",
                     target: :_blank
-                    .adress-font= service[:vicinity].to_s
+                    .adress-font= service[:vicinity]
   %a.carousel-control-prev{ 'data-slide' => 'prev',
-  :href => '#carouselExampleControls', :role => 'button' }
+  :href => '#carousel-example-controls', :role => 'button' }
     %span.carousel-control-prev-icon{ 'aria-hidden' => 'true' }
     %span.sr-only Previous
   %a.carousel-control-next{ 'data-slide' => 'next',
-  :href => '#carouselExampleControls', :role => 'button' }
+  :href => '#carousel-example-controls', :role => 'button' }
     %span.carousel-control-next-icon{ 'aria-hidden' => 'true' }
     %span.sr-only Next
