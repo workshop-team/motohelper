@@ -1,12 +1,13 @@
 .text-center
-  %button.btn.btn-primary{onclick: "Dashboard.setLocation()"}
+  %button.btn.btn-primary{ onclick: 'Dashboard.setLocation()' }
     = t('.update_location')
   %p #{t('.last_known_position')}: #{data[:closest_service][:address]}
-#position_info
-#carouselExampleControls.carousel.slide{"data-ride" => "carousel",  "data-interval" => "7000"}
+#position-info
+.carousel.slide#carousel-example-controls{ 'data-ride' => 'carousel',
+'data-interval' => '7000' }
   .carousel-inner
     - data[:closest_service][:places].keys.each_with_index do |type_of_place, index|
-      .carousel-item{class: index == 0 ? 'active' : nil}
+      .carousel-item{ class: index.zero? ? 'active' : nil }
         .service-box
           %h5= t(".#{type_of_place}")
           - if data[:closest_service][:places][type_of_place].empty?
@@ -16,14 +17,15 @@
               - data[:closest_service][:places][type_of_place].first(2).each do |service|
                 %tr
                   %td
-                    #{service[:name]}
-                    .adress-font #{service[:vicinity]}
-                  %td
-                    .align-middle
-                      %button.btn.btn-light{:type => "button"} #{I18n.t('see')}
-  %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleControls", :role => "button"}
-    %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+                    = link_to service[:name],
+                    "https://www.google.com/maps/place/?q=place_id:#{service[:place_id]}",
+                    target: :_blank
+                    .adress-font= service[:vicinity]
+  %a.carousel-control-prev{ 'data-slide' => 'prev',
+  :href => '#carousel-example-controls', :role => 'button' }
+    %span.carousel-control-prev-icon{ 'aria-hidden' => 'true' }
     %span.sr-only Previous
-  %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleControls", :role => "button"}
-    %span.carousel-control-next-icon{"aria-hidden" => "true"}
+  %a.carousel-control-next{ 'data-slide' => 'next',
+  :href => '#carousel-example-controls', :role => 'button' }
+    %span.carousel-control-next-icon{ 'aria-hidden' => 'true' }
     %span.sr-only Next

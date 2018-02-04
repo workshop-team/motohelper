@@ -1,6 +1,6 @@
 var Dashboard = {
   setLocation: function() {
-    this.positionInfo = document.getElementById("position_info")
+    this.positionInfo = document.getElementById("position-info")
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(this.showPosition.bind(this), this.showError.bind(this));
