@@ -72,6 +72,7 @@ pl:
       we_need_current_password_to_confirm_changes: "(proszę wpisz swoje aktualne hasło aby potwierdzić zmiany)"
       characters_minimum: "znaków minimum"
       cancel_account: "Usuń konto"
+      unhappy: "Nie podoba mi się tutaj!"
     sessions:
       user:
         signed_in: "Zostałeś zalogowany."
