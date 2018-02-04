@@ -3,6 +3,15 @@
   %p.lead= t('.create_service_book')
   %p= t('.log_in_now')
   %p.lead
-    %a.btn.btn-primary.btn-lg{ href: new_user_session_path, role: "button" }
+    %a.btn.btn-primary.btn-lg{ href: new_user_session_path, role: 'button' }
       = t('.log_in')
-Dlaczego warto dbac o swoj samochod?
+%h4.text-center= t('.why_is_worth')
+%h5= t('.we_have_several_reasons')
+.list-group
+  %a.list-group-item.list-group-item-action{ href: '#' }= t('.less_failures')
+  %a.list-group-item.list-group-item-action{ href: '#' }= t('.increase_value')
+  %a.list-group-item.list-group-item-action{ href: '#' }= t('.makes_you_happy')
+= image_tag 'home/motohelper.jpg', class: 'rounded mx-auto d-block'
+%h4.text-center= t('.join_us')
+%h6.text-center= t('.register_and_use')
+%br/

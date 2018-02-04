@@ -5,6 +5,13 @@ pl:
       create_service_book: 'Stwórz książkę serwisową dla twojego pojazdu.. Online!'
       log_in_now: 'Zaloguj się do panelu:'
       log_in: 'Logowanie'
+      why_is_worth: 'Dlaczego warto dbać o samochód?'
+      we_have_several_reasons: 'Mamy kilka powodów:'
+      less_failures: 'Regularne serwisowanie przedewszystkim zmniejsza awaryjność Twojego pojazdu.'
+      increase_value: 'Zwiększa wartość Twojego pojazdu. Pokaż, że Twoje auto ma historię!'
+      makes_you_happy: 'Sprawia radość. W końcu wszyscy jesteśmy motoloverami!'
+      join_us: 'Dołącz do nas'
+      register_and_use: 'Zarejestruj się i korzystaj z wszystkich usług za darmo.'
 
     dashboard:
       closest_service: &closest_service 'Najbliższy serwis'
