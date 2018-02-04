@@ -62,7 +62,9 @@ html: { method: :put }) do |f|
         :back,
         class: 'btn btn-lg btn-secondary'
 .card-footer
+  %h3= t('devise.registrations.cancel_account')
   %p
+    = t('devise.registrations.unhappy')
     = button_to t('devise.registrations.cancel_account'),
     registration_path(resource_name),
     data: { confirm: t('are_you_sure') },
