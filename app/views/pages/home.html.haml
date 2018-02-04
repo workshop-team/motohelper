@@ -8,10 +8,11 @@
 %h4.text-center= t('.why_is_worth')
 %h5= t('.we_have_several_reasons')
 .list-group
-  %a.list-group-item.list-group-item-action{ href: '#' }= t('.less_failures')
-  %a.list-group-item.list-group-item-action{ href: '#' }= t('.increase_value')
-  %a.list-group-item.list-group-item-action{ href: '#' }= t('.makes_you_happy')
-= image_tag 'home/motohelper.jpg', class: 'rounded mx-auto d-block'
+  %button.list-group-item.list-group-item-action{ type: 'button' }= t('.less_failures')
+  %button.list-group-item.list-group-item-action{ type: 'button' }= t('.increase_value')
+  %button.list-group-item.list-group-item-action{ type: 'button' }= t('.makes_you_happy')
+.text-center
+  = image_tag 'home/motohelper.jpg', class: 'img-fluid'
 %h4.text-center= t('.join_us')
 %h6.text-center= t('.register_and_use')
 %br/
