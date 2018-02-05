@@ -1,7 +1,18 @@
 .jumbotron
-  %h1.display-4 Hello, world!
-  %p.lead This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-  %hr.my-4/
-  %p It uses utility classes for typography and spacing to space content out within the larger container.
+  %h1.display-4= t('.hello')
+  %p.lead= t('.create_service_book')
+  %p= t('.log_in_now')
   %p.lead
-    %a.btn.btn-primary.btn-lg{ href: "#", role: "button" } Learn more
+    %a.btn.btn-primary.btn-lg{ href: new_user_session_path, role: 'button' }
+      = t('.log_in')
+%h4.text-center= t('.why_is_worth')
+%h5= t('.we_have_several_reasons')
+%ul.list-group
+  %li.list-group-item= t('.less_failures')
+  %li.list-group-item= t('.increase_value')
+  %li.list-group-item= t('.makes_you_happy')
+.text-center
+  = image_tag 'home/motohelper.jpg', class: 'img-fluid'
+%h4.text-center= t('.join_us')
+%h6.text-center= t('.register_and_use')
+%br/
