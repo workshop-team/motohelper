@@ -1,1 +1,13 @@
 en:
+  contacts:
+    new:
+      got_idea: 'Got an idea or suggestion?'
+      thanks_for_getting_in_touch: 'Please complete the form below to send us an email. Thanks for getting in touch!'
+      name: 'Name'
+      email: 'E-mail'
+      body: 'Message'
+      send: 'Send'
+
+    create:
+      error_message: 'something is wrong :('
+      success_message: 'Message was sended!'

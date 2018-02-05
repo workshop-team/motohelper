@@ -1,1 +1,85 @@
 en:
+  activerecord:
+    models:
+      regular_user:
+        one: 'User'
+        other: 'Users'
+
+      admin_user:
+        one: 'Admin User'
+        other: 'Admin Users'
+
+      car:
+        one: 'Car'
+        other: 'Cars'
+
+      reminder:
+        one: 'Reminder'
+        other: 'Reminders'
+
+      maintenance:
+        one: 'Maintenance'
+        other: 'Maintenances'
+
+      workshop:
+        one: 'Workshop'
+        other: 'Workshops'
+
+      mileage:
+        one: 'Mileage'
+        other: 'Mileages'
+
+    attributes:
+      user:
+        avatar: 'Avatar'
+        name: 'Name'
+        email: 'E-mail'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        language: 'Language'
+        remember_me: 'Remember me'
+        set_default_avatar: 'Set default avatar'
+        load_new_avatar: 'Load new avatar'
+        current_password: 'Current password'
+
+      car:
+        brand: 'Brand'
+        model: 'Model'
+        registration_number: 'Registration number'
+
+      reminder:
+        name: 'Name'
+        reminder_date: 'Reminder date'
+        mileage: 'Mileage'
+        note: &note 'Note'
+
+      maintenance:
+        name: 'Name'
+        mileage: 'Mileage'
+        warranty_date: 'Warranty date'
+        note: *note
+
+      workshop:
+        kind: 'Kind'
+        latitude: 'Latitude'
+        longitude: 'Longitude'
+
+      mileage:
+        meter_status: 'Meter status'
+        date: 'Date'
+      
+    errors:
+      models:
+        maintenance:
+          attributes:
+            car:
+              required: &no_car 'Choice a car'
+        car:
+          attributes:
+            user:
+              required: 'User required'
+
+        mileage:
+          attributes:
+            car:
+              required: *no_car

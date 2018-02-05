@@ -1,0 +1,23 @@
+en:
+  routes:
+    cars: cars
+    maintenances: maintenances
+    mileages: mileages
+
+    reminders: reminders
+    archived: archived
+    archive: archive
+
+    users: users
+    sign_in: sign_in
+    sign_up: sign_up
+    sign_out: sign_out
+    password: password
+    confirmation: confirmation
+    
+    dashboard: dashboard
+    contact: contact
+
+    new: new
+    edit: edit
+  
