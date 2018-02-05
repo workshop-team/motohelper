@@ -3,7 +3,7 @@
 = link_to t('.archive'), archived_reminders_path, class: 'btn btn-secondary'
 
 .autopagerize_page_element
-  %table.table.table-hover
+  %table.table.table-hover.mt-3
     %thead
       %tr
         %th{ scope: 'col' }= Reminder.model_name.human

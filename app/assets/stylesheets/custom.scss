@@ -16,9 +16,8 @@ body {
   background-color: #f5f5f5;
 }
 
-
 body > .container {
-  padding: 60px 15px 0;
+  padding: 60px 15px 5px;
 }
 
 .footer > .container {
@@ -42,6 +41,7 @@ code {
 a.navbar-brand{
   padding: 0.75rem 0 0.75rem 0;
 }
+
 @media (max-width: 950px) {
   .card-deck {
     display: block;
@@ -53,7 +53,6 @@ a.navbar-brand{
   .container{
     max-width:930px;
   }
-
 }
 
 .service-box {
