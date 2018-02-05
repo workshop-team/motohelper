@@ -6,15 +6,12 @@ pl:
     dashboard_blocks:
       maintenance:
         last_added: &last_added 'Ostatnio dodane'
-        all:  'Wszystkie usługi serwisowe'
 
       reminders:
         last_added: *last_added
-        all: 'Wszystkie przypomnienia'
 
       mileage:
         last_added: *last_added
-        all: 'Rejestr przebiegów'
 
       closest_service_init:
         set_location: 'Pobierz lokalizację'

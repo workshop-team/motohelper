@@ -1,0 +1,10 @@
+pl:
+  layouts:
+    header:
+      admin: 'Admin'
+      dashboard: 'Deska rozdzielcza'
+      contact: 'Kontakt'
+      edit_profile: 'Edytuj profil'
+      logout: 'Wyloguj'
+      login: 'Zaloguj się'
+      register: 'Rejestracja'
