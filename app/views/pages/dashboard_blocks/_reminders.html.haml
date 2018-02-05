@@ -1,13 +1,14 @@
 %p.card-text
-  %h5 #{ t('.last_added') } (#{ link_to t('.all'), reminders_path })
+  %h5 #{t('.last_added')} (#{link_to t('all'), reminders_path})
 
   %table.table.table-sm
     %thead
       %tr
-        %th{scope: 'col'}= Reminder.model_name.human
-        %th{scope: 'col'}= Car.model_name.human
+        %th{ scope: 'col' }= Reminder.model_name.human
+        %th{ scope: 'col' }= Car.model_name.human
     %tbody
       - data[:reminders].each do |reminder|
         %tr
           %td= link_to reminder.name, reminder
-          %td=  reminder.car.decorate.name
+          %td= reminder.car.decorate.name
+
