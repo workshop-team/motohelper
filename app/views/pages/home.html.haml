@@ -7,10 +7,10 @@
       = t('.log_in')
 %h4.text-center= t('.why_is_worth')
 %h5= t('.we_have_several_reasons')
-.list-group
-  %button.list-group-item.list-group-item-action{ type: 'button' }= t('.less_failures')
-  %button.list-group-item.list-group-item-action{ type: 'button' }= t('.increase_value')
-  %button.list-group-item.list-group-item-action{ type: 'button' }= t('.makes_you_happy')
+%ul.list-group
+  %li.list-group-item= t('.less_failures')
+  %li.list-group-item= t('.increase_value')
+  %li.list-group-item= t('.makes_you_happy')
 .text-center
   = image_tag 'home/motohelper.jpg', class: 'img-fluid'
 %h4.text-center= t('.join_us')
