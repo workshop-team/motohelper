@@ -1,5 +1,5 @@
 .text-center
-  %button.btn.btn-primary{ onclick: 'Dashboard.setLocation()' }
+  %button.btn.btn-primary.mb-1{ onclick: 'Dashboard.setLocation()' }
     = t('.update_location')
   %p #{t('.last_known_position')}: #{data[:closest_service][:address]}
 #position-info
