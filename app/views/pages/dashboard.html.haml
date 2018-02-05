@@ -1,22 +1,23 @@
 .card-deck
   = render 'block', title: Car.model_name.human(count: 'few'), partial_name: 'cars', data: @data
   = render 'block',
-    title: Reminder.model_name.human(count: 'few'),
-    partial_name: 'reminders',
-    data: @data
-.card-deck
-  = render 'block',
     title: Maintenance.model_name.human(count: 'few'),
     partial_name: 'maintenance',
     data: @data
 
-  - if @data[:closest_service].present?
-    = render 'block', title: t('.closest_service'), partial_name: 'closest_service', data: @data
-  - else
-    = render 'block', title: t('.closest_service'), partial_name: 'closest_service_init', data: nil
-
 .card-deck
+  = render 'block',
+    title: Reminder.model_name.human(count: 'few'),
+    partial_name: 'reminders',
+    data: @data
+
   = render 'block',
     title: Mileage.model_name.human(count: 'few'),
     partial_name: 'mileage',
     data: @data
+    
+.card-deck
+  - if @data[:closest_service].present?
+    = render 'block', title: t('.closest_service'), partial_name: 'closest_service', data: @data
+  - else
+    = render 'block', title: t('.closest_service'), partial_name: 'closest_service_init', data: nil
