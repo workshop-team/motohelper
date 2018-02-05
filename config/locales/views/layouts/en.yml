@@ -1,0 +1,10 @@
+en:
+  layouts:
+    header:
+      admin: 'Admin'
+      dashboard: 'Dashboard'
+      contact: 'Contact'
+      edit_profile: 'Edit profile'
+      logout: 'Logout'
+      login: 'Login'
+      register: 'Register'
