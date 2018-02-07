@@ -1,11 +1,15 @@
 = simple_form_for @maintenance do |f|
   = f.input :name, as: :string
   = f.input :mileage, as: :integer
-  = f.input :warranty_date, as: :string, input_html: { class: 'datepicker', value: l_date(f.object.warranty_date) }
+  = f.input :warranty_date, as: :string,
+    input_html: { class: 'datepicker', value: l_date(f.object.warranty_date) }
+
   = f.input :note, as: :text
-  = f.association :car, collection: current_user.cars.decorate, label_method: :name, prompt: t('choose_option')
+  = f.association :car, collection: current_user.cars.decorate,
+    label_method: :name, prompt: t('choose_option')
+
   .form-group
-    = image_tag @maintenance.invoice.norm.url
+    = image_tag maintenance.invoice.norm.url
     %label.form-check-label
     = f.input :remove_invoice, as: :boolean, label: t('destroy')
   = f.input :invoice, as: :file
