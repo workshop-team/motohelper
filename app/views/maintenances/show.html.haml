@@ -22,6 +22,7 @@
     = image_tag(@maintenance.invoice.norm.url, alt: 'Invoice', class: 'img-thumbnail')
 
 
-= link_to t('destroy'), @maintenance, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-danger'
+= link_to t('destroy'), @maintenance,
+  method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-danger'
 = link_to t('edit'), edit_maintenance_path(@maintenance), class: 'btn btn-success'
 = link_to t('back'), maintenances_path, class: 'btn btn-secondary'
