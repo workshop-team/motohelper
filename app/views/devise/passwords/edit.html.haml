@@ -5,20 +5,21 @@ url: password_path(resource_name),
 html: { method: :put,
 class: 'form-signin' }) do |f|
   = f.hidden_field :reset_password_token
+  %br/
+  - if @minimum_password_length
+    = @minimum_password_length.to_s
+    %i= t('devise.registrations.characters_minimum')
     %br/
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-      %br/
-    = f.password_field :password,
-    autofocus: true,
-    autocomplete: 'off',
-    class: 'form-control devise-form',
-    placeholder: true
-    = f.password_field :password_confirmation,
-     autocomplete: 'off',
-     class: 'form-control devise-form',
-     placeholder: true
+  = f.password_field :password,
+  autofocus: true,
+  autocomplete: 'off',
+  class: 'form-control devise-form',
+  placeholder: true
+  = f.password_field :password_confirmation,
+  autocomplete: 'off',
+  class: 'form-control devise-form',
+  placeholder: true
   .actions
-    = f.submit t('devise.passwords.change_password')
-= render 'devise/shared/links'
+    = f.submit t('devise.passwords.change_password'),
+    class: 'btn btn-primary'
+  = render 'devise/shared/links'
