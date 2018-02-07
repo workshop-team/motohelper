@@ -1,8 +1,3 @@
-.text-right
-  =  link_to new_car_path, class: 'btn btn-success btn-sm text-white' do
-    = content_tag(:i, nil, class: 'fa fa-plus')
-    = t('add')
-
 %p.card-text
   %table.table
     %thead
@@ -10,6 +5,10 @@
         %th{ scope: 'col' }= Car.model_name.human
         %th
         %th
+          =  link_to new_car_path, class: 'btn btn-success btn-sm text-white' do
+            = content_tag(:i, nil, class: 'fa fa-plus')
+            = t('add')
+
     %tbody
       - data[:cars].each do |car|
         %tr
