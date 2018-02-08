@@ -26,4 +26,4 @@ rails s
 Config mailer on production:
 ``` config/environments/production.rb ```
 ``` config.action_mailer.default_url_options = { host: 'example.com' } ```
-:host should be set to the actual host of application.
+:host should be set to the actual host of application
