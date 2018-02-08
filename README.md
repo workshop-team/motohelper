@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/05871397fc9fbe7086c7/maintainability)](https://codeclimate.com/github/workshop-team/motohelper/maintainability)
+
 # README
 
 ### Download and setup the app
