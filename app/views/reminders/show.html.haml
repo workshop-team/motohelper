@@ -20,6 +20,6 @@
 = link_to t('destroy'),
   @reminder, method: :delete, data: { confirm: t('are_you_sure') },
   class: 'btn btn-danger'
-  
+
 = link_to t('edit'), edit_reminder_path(@reminder), class: 'btn btn-success'
 = link_to t('back'), reminders_path, class: 'btn btn-secondary'

@@ -31,5 +31,9 @@ module Motohelper
     config.generators.system_tests = nil
 
     config.active_job.queue_adapter = :sidekiq
+
+    config.to_prepare do
+      Administrate::ApplicationController.helper Motohelper::Application.helpers
+    end
   end
 end

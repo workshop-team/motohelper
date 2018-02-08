@@ -1,4 +1,4 @@
 .card.text-white.bg-dark.mb-4
-  .card-header #{title}
+  .card-header= title
   .card-body{ class: convert_partial_name_to_class(partial_name) }
     = render "pages/dashboard_blocks/#{partial_name}", data: data
