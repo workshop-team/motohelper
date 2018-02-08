@@ -7,6 +7,8 @@ server(
 set :rails_env, 'production'
 set :rvm_ruby_version, '2.5.0@motohelper'
 
+set :branch, 'stable'
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
