@@ -35,6 +35,7 @@ gem 'route_translator', '~> 5.5.3'
 gem 'sass-rails', '~> 5.0'
 gem 'sidekiq', '~> 5.0.5'
 gem 'simple_form', '~> 3.5.0'
+gem 'skylight', '~> 1.5.1'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'whenever', '~> 0.10.0', require: false
