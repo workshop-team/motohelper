@@ -8,6 +8,7 @@ class CarDashboard < Administrate::BaseDashboard
   # Each different type represents an Administrate::Field object,
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
+
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
     maintenances: Field::HasMany,
