@@ -6,13 +6,14 @@ pl:
       confirmed: "Twoje konto zostało aktywowane. Możesz się teraz zalogować."
       send_instructions: "Za chwilę otrzymasz email z instrukcją jak aktywować konto."
       send_paranoid_instructions: "Jeśli Twój adres email istnieje w naszej bazie, za chwilę powinieneś otrzymać instrukcję jak aktywować konto."
-      resent_configrmation_instruction: "Wyślij ponownie instrukcję aktywacji"
+      resent_confirmation_instruction: "Wyślij ponownie instrukcję aktywacji"
     failure:
       already_authenticated: "Jesteś aktualnie zalogowany."
       inactive: "Twoje konto nie zostało jeszcze aktywowane."
       invalid: "Błędny adres email lub hasło."
       invalid_token: "Błędny token aktywacyjny."
       locked: "Twoje konto jest zablokowane."
+      last_attempt: "Jeszcze jedna próba i Twoje konto zostanie zablokowane"
       not_found_in_database: "Błędny adres email lub hasło."
       timeout: "Sesja wygasła, zaloguj się ponownie by kontynuować."
       unauthenticated: "Aby kontynuować musisz się zalogować."
@@ -43,7 +44,7 @@ pl:
         subject: "Zmiana adresu mailowego w Motohelper"
         welcome: "Cześć"
         email_changed: "Dostajesz tą wiadomość, ponieważ dostaliśmy prośbę o zmianę Twojego adresu mailowego na adres:"
-        email_changed: "Dostajesz tą wiadomość, ponieważ Twój email został zmieniony na adres:"
+        email_has_been_changed: "Dostajesz tą wiadomość, ponieważ Twój email został zmieniony na adres:"
     omniauth_callbacks:
       failure: "Logowanie przez konto %{kind} zakończyło się błędem: \"%{reason}\"."
       success: "Zalogowałeś się pomyślnie przez konto %{kind}."
@@ -55,13 +56,12 @@ pl:
       updated_not_active: "Twoje hasło zostało zmienione."
       reset_password_instruction: "Wyślij instrukcję resetowania hasła"
       change_password: "Zmień hasło"
-
     registrations:
       destroyed: "Do widzenia! Twoje konto zostało usunięte."
       signed_up: "Witaj! Zarejestrowałeś się pomyślnie."
       signed_up_but_inactive: "Zarejestrowałeś się pomyślnie. Niemniej jednak nie zostałeś zalogowany, ponieważ Twoje konto nie zostało jeszcze aktywowane."
       signed_up_but_locked: "Zarejestrowałeś się pomyślnie. Niemniej jednak nie zostałeś zalogowany, ponieważ Twoje konto zostało zablokowane."
-      signed_up_but_unconfirmed: "Wiadomość email z instrukcją aktywacji konta została przesłana na Twój adres email. Użj linku z emaila aby aktywować konto."
+      signed_up_but_unconfirmed: "Wiadomość email z instrukcją aktywacji konta została przesłana na Twój adres email. Użyj linku z emaila aby aktywować konto."
       update_needs_confirmation: "Konto zostało zaktualizowane. Niemniej jednak przed wprowadzeniem zmian musimy potwierdzić Twój nowy adres email. Za chwilę wyślemy instrukcję na nowy adres."
       updated: "Konto zostało pomyślnie zaktualizowane."
       sign_up: "Rejestracja"
@@ -77,6 +77,7 @@ pl:
       user:
         signed_in: "Zostałeś zalogowany."
         signed_out: "Zostałeś wylogowany."
+        already_signed_out: "Zostałeś wylogowany.."
         forgot_your_password: "Odzyskaj hasło."
     unlocks:
       send_instructions: "Za chwilę otrzymasz wiadomość email z instrukcją jak odblokować konto."

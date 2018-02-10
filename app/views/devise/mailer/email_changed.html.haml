@@ -1,5 +1,5 @@
-%p "#{t('devise_views.mailer.email_changed.welcome')} #{@email}!"
+%p "#{t('devise.mailer.email_changed.welcome')} #{@email}!"
 - if @resource.try(:unconfirmed_email?)
-  %p "#{t('devise.mailer.email_changed.email_being_changed')} #{@resource.unconfirmed_email}."
+  %p "#{t('devise.mailer.email_changed.email_has_been_changed')} #{@resource.unconfirmed_email}."
 - else
   %p "#{t('devise.mailer.email_changed.email_changed')} #{@resource.email}."
