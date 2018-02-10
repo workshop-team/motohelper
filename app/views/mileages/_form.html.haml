@@ -5,4 +5,5 @@
     label_method: :name, prompt: t('choose_option')
 
   = f.input :date, as: :string, input_html: { class: 'datepicker', value: l_date(f.object.date) }
-  = f.submit
+  = f.button :submit
+  = link_to t('back'), maintenances_path, class: 'btn btn-secondary'
