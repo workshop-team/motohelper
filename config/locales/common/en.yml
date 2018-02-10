@@ -1,10 +1,10 @@
 en:
   auth_admin_alert: "Page only for Admin's available"
-  message_of_addition: 'Record został pomyślnie dodany'
-  message_of_addition_worse_mileage: 'Wpis został zapisany ale podales nieprawidlowy przebieg, popraw się Łobuzie!'
-  message_of_modification: 'Record został pomyślnie zmodyfikowany'
-  message_of_deletion: 'Rekord został pomyślnie usunięty'
-  message_of_deletion_fail: 'Usunięcie rekordu się nie powiodło'
+  message_of_addition: 'Record has been saved'
+  message_of_addition_worse_mileage: 'Record has been saved but you have been naughty and input wrong mileage value'
+  message_of_modification: 'Record has been changed'
+  message_of_deletion: 'Record has been deleted'
+  message_of_deletion_fail: 'Record has not been deleted'
   choose_option: 'Choice from list'
   are_you_sure: 'Are you sure?'
   add_new: 'Add new Item'

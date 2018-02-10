@@ -1,17 +1,17 @@
 en:
   pages:
     home:
-      hello: 'Cześć, kierowco!'
-      create_service_book: 'Stwórz książkę serwisową dla twojego pojazdu.. Online!'
-      log_in_now: 'Zaloguj się do panelu:'
-      log_in: 'Logowanie'
-      why_is_worth: 'Dlaczego warto dbać o samochód?'
-      we_have_several_reasons: 'Mamy kilka powodów:'
-      less_failures: 'Regularne serwisowanie przedewszystkim zmniejsza awaryjność Twojego pojazdu.'
-      increase_value: 'Zwiększa wartość Twojego pojazdu. Pokaż, że Twoje auto ma historię!'
-      makes_you_happy: 'Sprawia radość. W końcu wszyscy jesteśmy motoloverami!'
-      join_us: 'Dołącz do nas'
-      register_and_use: 'Zarejestruj się i korzystaj z wszystkich usług za darmo.'
+      hello: 'Hello driver!'
+      create_service_book: 'Create online maintenance book!'
+      log_in_now: 'Log in to the panel:'
+      log_in: 'Log in'
+      why_is_worth: 'Why should you look after your car?'
+      we_have_several_reasons: 'There are couple of reasons:'
+      less_failures: 'Regular servicing will make your car almost unbreakable.'
+      increase_value: 'It will increase your car value.'
+      makes_you_happy: 'It will make you happy. Because we all are car lovers!'
+      join_us: 'Join us'
+      register_and_use: 'Register and use all our features for free'
 
     dashboard:
       closest_service: &closest_service 'Nearest services'

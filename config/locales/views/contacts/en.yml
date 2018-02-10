@@ -9,5 +9,5 @@ en:
       send: 'Send'
 
     create:
-      error_message: 'something is wrong :('
-      success_message: 'Message was sended!'
+      error_message: 'Something went wrong :('
+      success_message: 'Message has been sent'

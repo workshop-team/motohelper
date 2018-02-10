@@ -6,10 +6,12 @@ en:
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+      resent_confirmation_instruction: "Resent activation instruction"
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
       invalid: "Invalid %{authentication_keys} or password."
+      invalid_token: "Activation token is invalid"
       locked: "Your account is locked."
       last_attempt: "You have one more attempt before your account is locked."
       not_found_in_database: "Invalid %{authentication_keys} or password."
@@ -19,14 +21,30 @@ en:
     mailer:
       confirmation_instructions:
         subject: "Confirmation instructions"
+        welcome: "Welcome"
+        confirmation_instruction: "To activate your account please click here:"
+        confirm: "Confirm"
       reset_password_instructions:
-        subject: "Reset password instructions"
-      unlock_instructions:
-        subject: "Unlock instructions"
-      email_changed:
-        subject: "Email Changed"
+        subject: "Password reset in Motohelper"
+        you_can_this_through_link: "You have requested a new password. To setup new password please click link below."
+        change_my_password: "Change my password"
+        ignore_this_mail: "Ignore this message ff you won't requested password change."
+        password_wont_change: "Your password will be changed only if you click the link below and setup new one."
       password_change:
         subject: "Password Changed"
+        welcome: "Welcome"
+        password_change: "Your password has been changed"
+      unlock_instructions:
+        subject: "Unlock instruction"
+        welcome: "Hi"
+        account_locked: "Your account has been locked due to too many failed login."
+        click_to_unlock: "Please click link below to unlock your account:"
+        unlock_instruction: "Unlock"
+      email_changed:
+        subject: "Email Changed"
+        welcome: "Hi"
+        email_changed: "You recently requested an email change to:"
+        email_has_been_changed: "Your registered email has been changed to:"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -36,6 +54,8 @@ en:
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       updated: "Your password has been changed successfully. You are now signed in."
       updated_not_active: "Your password has been changed successfully."
+      reset_password_instruction: "Sent password reset instruction"
+      change_password: "Change password"
     registrations:
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
@@ -44,16 +64,26 @@ en:
       signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: "Your account has been updated successfully."
+      sign_up: "Register"
+      sign_in: "Log in"
+      no_confirmation_instruction: "I haven't get confirmation instruction."
+      no_unlock_instruction: "No unlock instruction."
       leave_it_blank: "(leave blank if you don't want to change it)"
       cancel_account: 'Cancel account'
+      we_need_current_password_to_confirm_changes: "(please confirm your current password to save changes)"
+      characters_minimum: "minimum"
+      unhappy: "I don't like to be here!"
     sessions:
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
-      already_signed_out: "Signed out successfully."
+      user:
+        signed_in: "Signed in successfully."
+        signed_out: "Signed out successfully."
+        already_signed_out: "Signed out successfully."
+        forgot_your_password: "Recover your password."
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      resend_instruction: "Re-sent unlock instruction."
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"

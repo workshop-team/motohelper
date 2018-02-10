@@ -5,6 +5,6 @@ en:
       dashboard: 'Dashboard'
       contact: 'Contact'
       edit_profile: 'Edit profile'
-      logout: 'Logout'
-      login: 'Login'
+      logout: 'Log out'
+      login: 'Log in'
       register: 'Register'

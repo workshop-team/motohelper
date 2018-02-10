@@ -5,13 +5,13 @@ en:
       current: 'Current entry'
 
     reminder:
-      archive_now: 'Archive'
+      archive_now: 'Archive now'
       restore: 'Restore'
-    
+
     archive:
-      message_about_archiving: 'Wpis został zarchiwizowany'
-      message_about_archiving_fail: 'Awaria przy archwizacji!'
+      message_about_archiving: 'Your entry has been archived'
+      message_about_archiving_fail: 'Entry archiving has failed'
 
     restore_archived:
-      message_about_restoring: 'Wpis został przywrócony'
-      message_about_restoring_fail: 'Wpisu nie udało się przywrócić'
+      message_about_restoring: 'Your entry has been restored'
+      message_about_restoring_fail: 'Unfortunately we can not restore this entry'
