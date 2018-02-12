@@ -17,10 +17,9 @@
               - data[:closest_service][:places][type_of_place].first(2).each do |service|
                 %tr
                   %td
-                    = link_to service[:name],
-                    "https://www.google.com/maps/place/?q=place_id:#{service[:place_id]}",
-                    target: :_blank
+                    = link_to service[:name], google_place_url(service), target: :blank
                     .adress-font= service[:vicinity]
+
   %a.carousel-control-prev{ 'data-slide' => 'prev',
   :href => '#carousel-example-controls', :role => 'button' }
     %span.carousel-control-prev-icon{ 'aria-hidden' => 'true' }
