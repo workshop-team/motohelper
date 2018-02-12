@@ -7,4 +7,4 @@
   = f.association :car, collection: current_user.cars.decorate,
     label_method: :name, prompt: t('choose_option')
   = f.button :submit
-  = link_to t('back'), reminders_path, class: 'btn btn-secondary'
+  = link_to t('back'), :back, class: 'btn btn-secondary'
