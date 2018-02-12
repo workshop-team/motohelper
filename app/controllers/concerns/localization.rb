@@ -15,7 +15,7 @@ module Localization
 
   def default_language
     if request.env['HTTP_ACCEPT_LANGUAGE'].present?
-      request.env['HTTP_ACCEPT_LANGUAGE'][0..1]
+      request.env['HTTP_ACCEPT_LANGUAGE'][0..1] == 'pl' ? 'pl' : 'en'
     else
       I18n.default_locale
     end
