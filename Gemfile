@@ -9,7 +9,7 @@ end
 
 gem 'rails', '~> 5.1.7'
 
-gem 'administrate', '~> 0.8.1'
+gem 'administrate', '~> 0.13.0'
 gem 'administrate-field-carrierwave', '~> 0.3'
 gem 'administrate-field-select', '~> 2.1', require: 'administrate/field/select_basic'
 gem 'bootstrap', '>= 4.3.1'
